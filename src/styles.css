@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-inter;
+    @apply h-screen flex flex-col justify-between font-inter;
   }
 
   h2 {
@@ -29,14 +29,14 @@
   }
 }
 
-.accept:checked + label {
+.accept:checked + label span {
   @apply bg-theme-primary;
 }
 
-.accept:checked + label svg {
+.accept:checked + label span svg {
   @apply block;
 }
 
-.accept:checked + label + div ul {
+.accept:checked + label div ul {
   @apply block;
 }
