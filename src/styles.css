@@ -9,6 +9,10 @@
     @apply h-screen flex flex-col justify-between font-inter;
   }
 
+  main {
+    @apply flex-1;
+  }
+
   h2 {
     @apply text-xl sm:text-2xl font-bold text-theme-foreground;
   }
@@ -37,6 +41,6 @@
   @apply block;
 }
 
-.accept:checked + label div ul {
+.accept:checked ~ #accept-list {
   @apply block;
 }

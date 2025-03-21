@@ -737,45 +737,50 @@
 
           <!-- Submit Button -->
           <div class="sm:col-span-2 space-y-4">
-            <!-- Accepting -->
-            <div class="flex gap-2">
-              <input type="checkbox" id="accept" class="accept hidden" />
-              <label for="accept" class="flex items-start gap-2 cursor-pointer">
-                <span
-                  class="size-4 shrink-0 grid place-content-center border border-theme-primary rounded"
-                >
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="hidden"
-                  >
-                    <path
-                      d="M3 6.813L3.803 7.674C4.246 8.149 4.4675 8.386 4.7155 8.461C4.9335 8.5265 5.1655 8.509 5.373 8.411C5.6095 8.299 5.799 8.0305 6.179 7.493L9 3.5"
-                      stroke="#F8FAFC"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
+            <!-- Accepting Section -->
+            <div class="flex flex-col gap-2">
+              <div class="flex items-start gap-2">
+                <input type="checkbox" id="accept" class="accept hidden" />
 
-                <div>
+                <label
+                  for="accept"
+                  class="flex items-start gap-2 cursor-pointer"
+                >
+                  <span
+                    class="size-4 shrink-0 grid place-content-center border border-theme-primary rounded"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="hidden"
+                    >
+                      <path
+                        d="M3 6.813L3.803 7.674C4.246 8.149 4.4675 8.386 4.7155 8.461C4.9335 8.5265 5.1655 8.509 5.373 8.411C5.6095 8.299 5.799 8.0305 6.179 7.493L9 3.5"
+                        stroke="#F8FAFC"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+
                   <p class="font-medium text-sm text-theme-foreground">
                     Я прочитал(а) и принимаю:
                   </p>
-                  <ul
-                    class="hidden list-disc text-theme-primary text-xs mt-1 pl-4"
-                  >
-                    <li>
-                      Правила и условия оказания услуги связи "Видеосвидание"
-                    </li>
-                    <li>Политику в отношении обработки персональных данных</li>
-                  </ul>
-                </div>
-              </label>
+                </label>
+              </div>
+
+              <!-- Terms List -->
+              <ul
+                class="list-disc text-theme-primary text-xs pl-10"
+                id="accept-list"
+              >
+                <li>Правила и условия оказания услуги связи "Видеосвидание"</li>
+                <li>Политику в отношении обработки персональных данных</li>
+              </ul>
             </div>
 
             <a
@@ -797,11 +802,19 @@
             <div class="space-y-2.5">
               <p>
                 Забыли пароль?
-                <a href="#" class="text-theme-primary">Сбросить</a>
+                <a
+                  href="#"
+                  class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                  >Сбросить</a
+                >
               </p>
               <p>
                 Уже регистрировались ранее?
-                <a href="./login.html" class="text-theme-primary">Войти</a>
+                <a
+                  href="./login.html"
+                  class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                  >Войти</a
+                >
               </p>
             </div>
           </div>
