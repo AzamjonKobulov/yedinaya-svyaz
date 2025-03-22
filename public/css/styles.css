@@ -1061,6 +1061,11 @@ h2{
   color: rgb(0 153 102 / var(--tw-text-opacity, 1));
 }
 
+.group:hover .group-hover\:text-theme-foreground{
+  --tw-text-opacity: 1;
+  color: rgb(2 6 24 / var(--tw-text-opacity, 1));
+}
+
 .group:hover .group-hover\:opacity-70{
   opacity: 0.7;
 }
