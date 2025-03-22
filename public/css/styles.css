@@ -567,6 +567,9 @@ h2{
 .z-50{
   z-index: 50;
 }
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -580,6 +583,9 @@ h2{
 }
 .mt-4{
   margin-top: 1rem;
+}
+.block{
+  display: block;
 }
 .flex{
   display: flex;
@@ -622,11 +628,20 @@ h2{
 .w-full{
   width: 100%;
 }
+.w-\[373px\]{
+  width: 373px;
+}
 .max-w-\[373px\]{
   max-width: 373px;
 }
 .max-w-base{
   max-width: 1280px;
+}
+.flex-1{
+  flex: 1 1 0%;
+}
+.\!flex-1{
+  flex: 1 1 0% !important;
 }
 .shrink-0{
   flex-shrink: 0;
