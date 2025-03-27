@@ -76,3 +76,70 @@ mobMenu.querySelectorAll("a, button").forEach((item) =>
 //     toast.classList.add("hidden");
 //   }, 300);
 // }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".menu-link");
+
+  function setActiveLink(event) {
+    links.forEach((link) => link.classList.remove("active"));
+    event.currentTarget.classList.add("active");
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("click", setActiveLink);
+  });
+
+  // Set active link based on the current URL
+  const currentPath = window.location.pathname.split("/").pop();
+  links.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// Initialize select functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const selects = document.querySelectorAll(".select");
+
+  selects.forEach((select) => {
+    const button = select.querySelector(".select-button");
+    const list = select.querySelector(".select-list");
+    const icon = select.querySelector(".select-icon");
+    const label = select.querySelector(".select-label");
+
+    // Toggle select
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      list.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    });
+
+    // Select option
+    list.addEventListener("click", (e) => {
+      const target = e.target.closest("li");
+      if (!target) return;
+
+      // Remove 'text-black' class from previously selected item
+      list.querySelectorAll("li").forEach((item) => {
+        item.classList.remove("text-black");
+      });
+
+      // Update label and apply styles
+      label.textContent = target.dataset.value;
+      target.classList.add("text-black");
+
+      // Hide dropdown
+      list.classList.add("hidden");
+      icon.classList.remove("rotate-180");
+    });
+
+    // Close select when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!select.contains(e.target)) {
+        list.classList.add("hidden");
+        icon.classList.remove("rotate-180");
+      }
+    });
+  });
+});

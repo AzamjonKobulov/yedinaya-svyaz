@@ -16,6 +16,8 @@ module.exports = {
       },
       fontFamily: {
         inter: ["Inter"],
+        seoul: ["SeoulNamsan CB", "Inter"],
+        plus: ["Plus Jakarta Sans", "Inter"],
       },
       colors: {
         theme: {
@@ -27,10 +29,15 @@ module.exports = {
           "sidebar-border": "#E2E8F0",
           green: "#DCFCE7",
           distructive: "#E7000B",
+          "sea-blue": "#0FE0C8",
+          "chart-4": "#E8C468",
+          "chart-5": "#F4A462",
         },
       },
       backgroundImage: {
         menu: "linear-gradient(112deg, rgba(0, 167, 111, 0.05) 0%, rgba(9, 240, 240, 0.05) 100%);",
+        service: "linear-gradient(254.89deg, #009938 0%, #003806 99.55%)",
+        card: "linear-gradient(112deg, #00A76F 0%, #09F0F0 100%)",
       },
     },
   },

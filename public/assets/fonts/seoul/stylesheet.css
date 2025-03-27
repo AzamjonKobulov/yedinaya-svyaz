@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "SeoulNamsan CB";
+  src: url("SeN-CB.woff2") format("woff2"), url("SeN-CB.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
