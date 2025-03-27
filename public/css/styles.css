@@ -1023,6 +1023,9 @@ h2{
 .pl-4{
   padding-left: 1rem;
 }
+.text-center{
+  text-align: center;
+}
 .font-plus{
   font-family: Plus Jakarta Sans, Inter;
 }
