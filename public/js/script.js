@@ -125,8 +125,12 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.remove("text-black");
       });
 
-      // Update label and apply styles
-      label.textContent = target.dataset.value;
+      // Extract the price and units separately
+      const [price, units] = target.dataset.value.split(" (");
+
+      // Update label with the proper formatting
+      label.innerHTML = `${price} <span class="text-theme-muted-foreground">(${units}</span>`;
+
       target.classList.add("text-black");
 
       // Hide dropdown
@@ -142,4 +146,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btnMap = document.getElementById("btn-map");
+  const btnList = document.getElementById("btn-list");
+  const mapContainer = document.getElementById("map-container");
+  const listContainer = document.getElementById("list-container");
+
+  function activateTab(activeBtn, inactiveBtn, showEl, hideEl) {
+    activeBtn.classList.add("border-theme-primary");
+    activeBtn.classList.remove("border-theme-input");
+    inactiveBtn.classList.add("border-theme-input");
+    inactiveBtn.classList.remove("border-theme-primary");
+
+    showEl.classList.remove("hidden");
+    hideEl.classList.add("hidden");
+  }
+
+  btnMap.addEventListener("click", () =>
+    activateTab(btnMap, btnList, mapContainer, listContainer)
+  );
+  btnList.addEventListener("click", () =>
+    activateTab(btnList, btnMap, listContainer, mapContainer)
+  );
 });
