@@ -51,7 +51,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobMenu"
-        class="fade-in fixed z-50 inset-x-0 bottom-0 top-14 w-full flex flex-col justify-between hidden lg:hidden bg-white space-y-16 py-4 px-2"
+        class="fade-in fixed z-50 inset-x-0 bottom-0 top-14 w-full flex flex-col justify-between hidden lg:hidden bg-white space-y-5 py-4 px-2"
       >
         <!-- Links -->
         <ul class="space-y-4 text-theme-muted-foreground">
@@ -679,16 +679,16 @@
           id="service"
           class="bg-service w-full space-y-6 sm:space-y-8 text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8"
         >
-          <h1 class="text-3xl md:text-4xl font-semibold xl:pr-40">
+          <h1 class="text-3xl md:text-4xl font-semibold pr-10 xl:pr-40">
             Cервис голосовой и видео связи для исправительных учреждений ФСИН
             России
           </h1>
 
           <!-- Info -->
-          <div class="flex flex-col md:flex-row md:items-start gap-6">
+          <div class="flex flex-col md:flex-row md:items-start gap-6 pt-1">
             <!-- Card -->
             <div
-              class="max-w-[305px] w-full space-y-[26px] bg-card rounded-2xl py-8 px-6"
+              class="max-w-[305px] w-full space-y-4 sm:space-y-[26px] bg-card rounded-2xl p-6 sm:py-8"
             >
               <!-- Logo -->
               <div class="flex items-center justify-between">
@@ -739,7 +739,7 @@
                   Общайтесь с близкими по самым выгодным тарифами России
                 </p>
 
-                <div class="space-y-2 text-sm md:text-base">
+                <div class="space-y-2 text-sm md:text-base text-theme-muted">
                   <p>2,40 р./м. – на номера сотового телефона РФ</p>
                   <p>
                     1,50 р./м. – на голосовой и видео звонок через приложение.
@@ -818,7 +818,7 @@
             <!-- Plan 1 -->
             <a
               href="#"
-              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-theme-chart-4/10 border-l-4 border-theme-chart-4 rounded-xl shadow-lg overflow-hidden px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
+              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-theme-chart-4/10 border-l-4 border-theme-chart-4 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
             >
               <img src="./assets/svgs/logo-icon-opacity.svg" alt="Logo icon" />
               <div>
@@ -831,7 +831,7 @@
             <!-- Plan 2 -->
             <a
               href="#"
-              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-theme-chart-5/10 border-l-4 border-theme-chart-5 rounded-xl shadow-lg overflow-hidden px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
+              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-theme-chart-5/10 border-l-4 border-theme-chart-5 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
             >
               <img src="./assets/svgs/logo-icon-opacity.svg" alt="Logo icon" />
               <div>
@@ -844,7 +844,7 @@
             <!-- Plan 3 -->
             <a
               href="#"
-              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-teal-500/10 border-l-4 border-teal-500 rounded-xl shadow-lg overflow-hidden px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
+              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-teal-500/10 border-l-4 border-teal-500 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
             >
               <img src="./assets/svgs/logo-icon-opacity.svg" alt="Logo icon" />
               <div>
@@ -857,7 +857,7 @@
             <!-- Plan 4 -->
             <a
               href="#"
-              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-theme-primary/10 border-l-4 border-theme-primary rounded-xl shadow-lg overflow-hidden px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
+              class="relative flex items-center gap-3 sm:gap-5 bg-white after:absolute after:inset-0 after:size-full after:bg-theme-primary/10 border-l-4 border-theme-primary rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 px-3 py-6 sm:py-5 sm:pl-5 sm:pr-0"
             >
               <img src="./assets/svgs/logo-icon-opacity.svg" alt="Logo icon" />
               <div>
@@ -895,82 +895,165 @@
             </p>
           </div>
 
-          <!-- Tabs -->
-          <div class="flex items-center gap-2 text-sm font-medium">
-            <button
-              id="btn-map"
-              class="tab-btn h-10 w-full sm:w-auto border border-theme-primary rounded-lg hover:border-theme-primary transition-all duration-200 px-6 active"
-            >
-              На карте
-            </button>
-            <button
-              id="btn-list"
-              class="tab-btn h-10 w-full sm:w-auto border border-theme-input rounded-lg hover:border-theme-primary transition-all duration-200 px-6"
-            >
-              Списком
-            </button>
-          </div>
+          <div class="map-list-tabs space-y-3">
+            <!-- Tabs -->
+            <div class="flex items-center gap-2 text-sm font-medium">
+              <button
+                id="btn-map"
+                class="tab-btn btn-map h-10 w-full sm:w-auto border border-theme-primary rounded-lg hover:border-theme-primary transition-all duration-200 px-6 active"
+              >
+                На карте
+              </button>
+              <button
+                id="btn-list"
+                class="tab-btn btn-list h-10 w-full sm:w-auto border border-theme-input rounded-lg hover:border-theme-primary transition-all duration-200 px-6"
+              >
+                Списком
+              </button>
+            </div>
 
-          <!-- Map -->
-          <div id="map-container" class="space-y-3">
-            <div class="h-[416px] rounded-2xl sm:rounded-3xl overflow-hidden">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A1b092875ae27802be31cb181d6bb97f69a1ef2304a962a5ceaa884770fe5a54d&amp;source=constructor"
-                frameborder="0"
-                class="size-full object-cover"
-              ></iframe>
+            <!-- Map -->
+            <div class="map-container space-y-3">
+              <div class="h-[416px] rounded-2xl sm:rounded-3xl overflow-hidden">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A1b092875ae27802be31cb181d6bb97f69a1ef2304a962a5ceaa884770fe5a54d&amp;source=constructor"
+                  frameborder="0"
+                  class="size-full object-cover"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- List -->
+            <div class="list-container space-y-3 hidden">
+              <ul
+                class="space-y-2 text-sm sm:text-base text-theme-muted-foreground pb-3"
+              >
+                <li class="flex items-center gap-5">
+                  <span
+                    class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                  ></span>
+                  <p>ОТБ-1 г.Саратов УШ382/1 с.Александровка</p>
+                </li>
+                <li class="flex items-center gap-5">
+                  <span
+                    class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                  ></span>
+                  <p>СИЗО-64/1 г. Саратов, ул.Кутякова, д.105</p>
+                </li>
+                <li class="flex items-center gap-5">
+                  <span
+                    class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                  ></span>
+                  <p>
+                    СИЗО-2 г. Саратовская обл., г.Вольск., ул.Комсомольская
+                    д.157
+                  </p>
+                </li>
+                <li class="flex items-center gap-5">
+                  <span
+                    class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                  ></span>
+                  <p>
+                    ИК-2 Саратовская обл ., г. Энгельс, Функциональный проезд,
+                    14
+                  </p>
+                </li>
+                <li class="flex items-center gap-5">
+                  <span
+                    class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                  ></span>
+                  <p>
+                    КП-20 Саратовская обл., Красноармейский район ст. Паницкая,
+                    ул.Победы, 5Г
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <!-- List -->
-          <div id="list-container" class="space-y-3 hidden">
+          <div class="space-y-6">
             <h3 class="text-lg font-bold text-theme-foreground">Учреждения</h3>
             <p class="text-theme-muted-foreground">
               Если вы еще не знаете, есть ли терминалы «Единая связь» в
               учреждениях, где содержится ваш близкий, ознакомьтесь со списком
               учреждений, с которыми мы работаем.
             </p>
-            <ul
-              class="space-y-2 text-sm sm:text-base text-theme-muted-foreground pb-3"
-            >
-              <li class="flex items-center gap-5">
-                <span
-                  class="size-1.5 shrink-0 bg-theme-primary rounded-full"
-                ></span>
-                <p>ОТБ-1 г.Саратов УШ382/1 с.Александровка</p>
-              </li>
-              <li class="flex items-center gap-5">
-                <span
-                  class="size-1.5 shrink-0 bg-theme-primary rounded-full"
-                ></span>
-                <p>СИЗО-64/1 г. Саратов, ул.Кутякова, д.105</p>
-              </li>
-              <li class="flex items-center gap-5">
-                <span
-                  class="size-1.5 shrink-0 bg-theme-primary rounded-full"
-                ></span>
-                <p>
-                  СИЗО-2 г. Саратовская обл., г.Вольск., ул.Комсомольская д.157
-                </p>
-              </li>
-              <li class="flex items-center gap-5">
-                <span
-                  class="size-1.5 shrink-0 bg-theme-primary rounded-full"
-                ></span>
-                <p>
-                  ИК-2 Саратовская обл ., г. Энгельс, Функциональный проезд, 14
-                </p>
-              </li>
-              <li class="flex items-center gap-5">
-                <span
-                  class="size-1.5 shrink-0 bg-theme-primary rounded-full"
-                ></span>
-                <p>
-                  КП-20 Саратовская обл., Красноармейский район ст. Паницкая,
-                  ул.Победы, 5Г
-                </p>
-              </li>
-            </ul>
+
+            <div class="map-list-tabs space-y-3">
+              <!-- Tabs 2 -->
+              <div class="flex items-center gap-2 text-sm font-medium">
+                <button
+                  class="tab-btn btn-map h-10 w-full sm:w-auto border border-theme-primary rounded-lg hover:border-theme-primary transition-all duration-200 px-6 active"
+                >
+                  На карте
+                </button>
+                <button
+                  class="tab-btn btn-list h-10 w-full sm:w-auto border border-theme-input rounded-lg hover:border-theme-primary transition-all duration-200 px-6"
+                >
+                  Списком
+                </button>
+              </div>
+
+              <!-- Map 2 -->
+              <div class="map-container space-y-3">
+                <div
+                  class="h-[416px] rounded-2xl sm:rounded-3xl overflow-hidden"
+                >
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A1b092875ae27802be31cb181d6bb97f69a1ef2304a962a5ceaa884770fe5a54d&amp;source=constructor"
+                    frameborder="0"
+                    class="size-full object-cover"
+                  ></iframe>
+                </div>
+              </div>
+
+              <!-- List 2 -->
+              <div class="list-container space-y-3 hidden">
+                <ul
+                  class="space-y-2 text-sm sm:text-base text-theme-muted-foreground pb-3"
+                >
+                  <li class="flex items-center gap-5">
+                    <span
+                      class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                    ></span>
+                    <p>ОТБ-1 г.Саратов УШ382/1 с.Александровка</p>
+                  </li>
+                  <li class="flex items-center gap-5">
+                    <span
+                      class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                    ></span>
+                    <p>СИЗО-64/1 г. Саратов, ул.Кутякова, д.105</p>
+                  </li>
+                  <li class="flex items-center gap-5">
+                    <span
+                      class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                    ></span>
+                    <p>
+                      СИЗО-2 г. Саратовская обл., г.Вольск., ул.Комсомольская
+                      д.157
+                    </p>
+                  </li>
+                  <li class="flex items-center gap-5">
+                    <span
+                      class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                    ></span>
+                    <p>
+                      ИК-2 Саратовская обл ., г. Энгельс, Функциональный проезд,
+                      14
+                    </p>
+                  </li>
+                  <li class="flex items-center gap-5">
+                    <span
+                      class="size-1.5 shrink-0 bg-theme-primary rounded-full"
+                    ></span>
+                    <p>
+                      КП-20 Саратовская обл., Красноармейский район ст.
+                      Паницкая, ул.Победы, 5Г
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 

@@ -148,26 +148,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Tabs
 document.addEventListener("DOMContentLoaded", function () {
-  const btnMap = document.getElementById("btn-map");
-  const btnList = document.getElementById("btn-list");
-  const mapContainer = document.getElementById("map-container");
-  const listContainer = document.getElementById("list-container");
+  document.querySelectorAll(".map-list-tabs").forEach((section) => {
+    const btnMap = section.querySelector(".btn-map");
+    const btnList = section.querySelector(".btn-list");
+    const mapContainer = section.querySelector(".map-container");
+    const listContainer = section.querySelector(".list-container");
 
-  function activateTab(activeBtn, inactiveBtn, showEl, hideEl) {
-    activeBtn.classList.add("border-theme-primary");
-    activeBtn.classList.remove("border-theme-input");
-    inactiveBtn.classList.add("border-theme-input");
-    inactiveBtn.classList.remove("border-theme-primary");
+    function activateTab(activeBtn, inactiveBtn, showEl, hideEl) {
+      activeBtn.classList.add("border-theme-primary");
+      activeBtn.classList.remove("border-theme-input");
+      inactiveBtn.classList.add("border-theme-input");
+      inactiveBtn.classList.remove("border-theme-primary");
 
-    showEl.classList.remove("hidden");
-    hideEl.classList.add("hidden");
-  }
+      showEl.classList.remove("hidden");
+      hideEl.classList.add("hidden");
+    }
 
-  btnMap.addEventListener("click", () =>
-    activateTab(btnMap, btnList, mapContainer, listContainer)
-  );
-  btnList.addEventListener("click", () =>
-    activateTab(btnList, btnMap, listContainer, mapContainer)
-  );
+    btnMap.addEventListener("click", () =>
+      activateTab(btnMap, btnList, mapContainer, listContainer)
+    );
+    btnList.addEventListener("click", () =>
+      activateTab(btnList, btnMap, listContainer, mapContainer)
+    );
+  });
 });
