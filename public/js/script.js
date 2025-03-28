@@ -15,6 +15,8 @@ mobMenuToggle.addEventListener("click", function () {
 mobMenu.querySelectorAll("a, button").forEach((item) =>
   item.addEventListener("click", function () {
     mobMenu.classList.toggle("hidden");
+    menuX.classList.toggle("hidden");
+    menuIcon.classList.toggle("hidden");
   })
 );
 
@@ -77,23 +79,40 @@ mobMenu.querySelectorAll("a, button").forEach((item) =>
 //   }, 300);
 // }
 
+// Active link Func
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(".menu-link");
-
-  function setActiveLink(event) {
-    links.forEach((link) => link.classList.remove("active"));
-    event.currentTarget.classList.add("active");
-  }
+  const currentPath = window.location.pathname.split("/").pop(); // Get the current file name
 
   links.forEach((link) => {
-    link.addEventListener("click", setActiveLink);
-  });
+    const isActive = link.getAttribute("href") === `./${currentPath}`;
 
-  // Set active link based on the current URL
-  const currentPath = window.location.pathname.split("/").pop();
-  links.forEach((link) => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
+    if (isActive) {
+      link.classList.add("border-theme-primary", "bg-menu");
+
+      // Apply text color to <p> elements inside active link
+      link.querySelectorAll("p").forEach((p) => {
+        p.classList.add("text-theme-foreground");
+      });
+
+      // Apply stroke color to <svg> inside active link
+      const svg = link.querySelector("svg");
+      if (svg) {
+        svg.classList.add("stroke-theme-primary");
+      }
+    } else {
+      link.classList.remove("border-theme-primary", "bg-menu");
+
+      // Remove text color from <p> elements
+      link.querySelectorAll("p").forEach((p) => {
+        p.classList.remove("text-theme-foreground");
+      });
+
+      // Remove stroke color from <svg>
+      const svg = link.querySelector("svg");
+      if (svg) {
+        svg.classList.remove("stroke-theme-primary");
+      }
     }
   });
 });
@@ -129,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const [price, units] = target.dataset.value.split(" (");
 
       // Update label with the proper formatting
-      label.innerHTML = `${price} <span class="text-theme-muted-foreground">(${units}</span>`;
+      label.innerHTML = `${price} <span class="text-theme-muted-foreground text-sm">(${units}</span>`;
 
       target.classList.add("text-black");
 
@@ -150,27 +169,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Tabs
 document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".tab-section").forEach((section) => {
+    const buttons = section.querySelectorAll(".tab-btn");
+    const forms = section.querySelectorAll(".tab-content");
+
+    function activateTab(activeBtn) {
+      buttons.forEach((btn) =>
+        btn.classList.remove("bg-white", "shadow-xs", "text-theme-foreground")
+      );
+      activeBtn.classList.add("bg-white", "shadow-xs", "text-theme-foreground");
+
+      forms.forEach((form) => form.classList.add("hidden"));
+      const targetForm = section.querySelector(`#${activeBtn.dataset.target}`);
+      if (targetForm) {
+        targetForm.classList.remove("hidden");
+      }
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => activateTab(button));
+    });
+
+    // Activate first tab by default
+    if (buttons.length) {
+      activateTab(buttons[0]);
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".map-list-tabs").forEach((section) => {
-    const btnMap = section.querySelector(".btn-map");
-    const btnList = section.querySelector(".btn-list");
+    const btns = section.querySelectorAll(".tab-btn");
     const mapContainer = section.querySelector(".map-container");
     const listContainer = section.querySelector(".list-container");
 
-    function activateTab(activeBtn, inactiveBtn, showEl, hideEl) {
-      activeBtn.classList.add("border-theme-primary");
-      activeBtn.classList.remove("border-theme-input");
-      inactiveBtn.classList.add("border-theme-input");
-      inactiveBtn.classList.remove("border-theme-primary");
+    btns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const isMap = btn.classList.contains("btn-map");
 
-      showEl.classList.remove("hidden");
-      hideEl.classList.add("hidden");
-    }
+        btns.forEach((b) => {
+          b.classList.toggle("border-theme-primary", b === btn);
+          b.classList.toggle("border-theme-input", b !== btn);
+        });
 
-    btnMap.addEventListener("click", () =>
-      activateTab(btnMap, btnList, mapContainer, listContainer)
-    );
-    btnList.addEventListener("click", () =>
-      activateTab(btnList, btnMap, listContainer, mapContainer)
-    );
+        if (isMap) {
+          mapContainer.classList.remove("hidden");
+          listContainer.classList.add("hidden");
+        } else {
+          mapContainer.classList.add("hidden");
+          listContainer.classList.remove("hidden");
+        }
+      });
+    });
   });
 });

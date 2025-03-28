@@ -32,12 +32,20 @@ module.exports = {
           "sea-blue": "#0FE0C8",
           "chart-4": "#E8C468",
           "chart-5": "#F4A462",
+          gray: "#F8FAFC",
         },
       },
       backgroundImage: {
         menu: "linear-gradient(112deg, rgba(0, 167, 111, 0.05) 0%, rgba(9, 240, 240, 0.05) 100%);",
         service: "linear-gradient(254.89deg, #009938 0%, #003806 99.55%)",
         card: "linear-gradient(112deg, #00A76F 0%, #09F0F0 100%)",
+        cards: "linear-gradient(112deg, #00A76F 0%, #09F0F0 100%)",
+      },
+      boxShadow: {
+        xs: "box-shadow: 0px 1px 2px 0px #0000000D",
+      },
+      borderRadius: {
+        xs: "2px",
       },
     },
   },

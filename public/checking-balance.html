@@ -36,14 +36,45 @@
 
           <a
             href="./login.html"
-            class="text-sm text-white bg-theme-primary rounded-lg hover:opacity-80 transition-all duration-200 p-2 lg:px-3"
+            class="flex items-center gap-2 text-sm text-white bg-theme-primary lg:bg-theme-muted rounded-lg hover:opacity-80 transition-all duration-200 p-2 lg:px-3"
           >
-            <span class="hidden lg:block">Войти/Зарегистрироваться</span>
-            <img
-              src="./assets/svgs/user-circle.svg"
-              alt="User icon"
-              class="lg:hidden"
-            />
+            <div class="hidden lg:block">
+              <p class="text-xs text-theme-muted-foreground">
+                Константинов К.К.
+              </p>
+              <p class="text-theme-foreground font-medium">+7 987 654 32 10</p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="stroke-white lg:stroke-theme-primary"
+            >
+              <circle
+                cx="11.5"
+                cy="9.5"
+                r="2.5"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 19.2001C16.6831 13.0134 7.31692 13.0134 7 19.2001"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
         </div>
       </nav>
@@ -365,7 +396,7 @@
       class="max-w-base mx-auto w-full flex gap-8 xl:gap-16 px-2 sm:px-4 py-4 sm:py-8"
     >
       <!-- Menu -->
-      <div class="w-[373px] sticky top-0 hidden lg:block space-y-16">
+      <div class="w-[373px] shrink-0 hidden lg:block space-y-16">
         <!-- Links -->
         <ul class="space-y-4 text-theme-muted-foreground">
           <!-- Link 1 -->
@@ -417,7 +448,7 @@
           <!-- Link 2 -->
           <li>
             <a
-              href="./login.html"
+              href="#"
               class="menu-link group flex items-start gap-3 border border-theme-input rounded-xl hover:border-theme-primary hover:bg-menu transition-all duration-200 p-4"
             >
               <div
@@ -672,85 +703,187 @@
         </div>
       </div>
 
-      <!-- Login -->
-      <div
-        class="flex-1 border border-theme-sidebar-border rounded-2xl sm:rounded-3xl p-6 sm:p-8"
-      >
-        <!-- Title -->
-        <div class="border-b border-dashed border-theme-sidebar-border pb-4">
-          <h2>Регистрация</h2>
-        </div>
+      <div class="w-full">
+        <!-- Info Banner -->
+        <div
+          class="border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden"
+        >
+          <!-- Top -->
+          <div class="w-full h-[120px] sm:h-[150px] relative bg-cards p-6">
+            <!-- Card Brands -->
+            <div class="w-max relative z-10 bg-black/5 rounded-xl py-2 px-3">
+              <div class="flex items-center">
+                <img
+                  src="./assets/svgs/credit-card.svg"
+                  alt="Card"
+                  class="size-7 rounded-full -mr-2"
+                />
+                <img
+                  src="./assets/svgs/sber-credits.png"
+                  alt="SberCredits"
+                  class="size-7 rounded-full -mr-2"
+                />
+                <img
+                  src="./assets/svgs/sber-bank.svg"
+                  alt="SberBank"
+                  class="size-7 rounded-full -mr-2"
+                />
+                <img
+                  src="./assets/svgs/yoomoney.svg"
+                  alt="YooMoney"
+                  class="size-7 rounded-full -mr-2"
+                />
+              </div>
+            </div>
+            <h2 class="relative z-10 text-white mt-4">Работа с картами</h2>
 
-        <!-- Steps -->
-        <div class="space-y-2 text-theme-muted-foreground mt-4">
-          <p class="text-xs">Шаг 2 из 2</p>
+            <!-- Rounded BG -->
+            <img
+              src="./assets/svgs/rounded-bg-cards.svg"
+              alt="Rounded Background"
+              class="absolute top-0 left-0"
+            />
 
-          <!-- Steps -->
-          <div class="grid grid-cols-2 gap-2">
-            <!-- 1 -->
-            <div class="h-1 w-full bg-theme-primary rounded-full"></div>
-            <!-- 2 -->
-            <div class="h-1 w-full bg-theme-primary rounded-full"></div>
+            <!-- Cards Image -->
+            <img
+              src="./assets/svgs/card-img.svg"
+              alt="Rounded Background"
+              class="hidden xs:block absolute bottom-0 right-0"
+            />
+
+            <!-- Cards Image Mobile -->
+            <img
+              src="./assets/svgs/card-img-mobile.svg"
+              alt="Rounded Background"
+              class="xs:hidden shrink-0 absolute bottom-0 right-0"
+            />
+          </div>
+          <!-- Bottom -->
+          <div
+            class="space-y-2 sm:space-y-4 bg-theme-gray text-sm sm:text-base p-6 sm:p-8"
+          >
+            <p>
+              Проверяйте и пополняйте баланс карты вплоть до максимального
+              баланса в 15 000 рублей
+            </p>
+            <p>
+              Если у вас еще нет карты, рекомендуем
+              <a href="./purchasing-card-1.html" class="text-theme-primary"
+                >купить ее через наш сайт</a
+              >
+              по минимальной цене.
+            </p>
           </div>
         </div>
 
-        <!-- Text -->
-        <div class="border-b border-dashed border-theme-sidebar-border py-4">
-          <p class="text-sm text-theme-muted-foreground">
-            На номер
-            <span class="text-theme-foreground">+7 1111111111</span> отправлен
-            пароль. <br />
-            Используйте его сейчас и в будущем для входа на сайт.
-          </p>
-        </div>
-
-        <!-- Form -->
-        <form action="#" class="w-full grid sm:grid-cols-2 gap-4 text-sm py-4">
-          <!-- Phone -->
-          <label for="password" class="sm:col-span-2">
-            <span class="font-medium">Пароль</span>
-            <input
-              type="password"
-              class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-              placeholder=""
-              id="password"
-            />
-            <span class="text-theme-muted-foreground text-sm">4 цифры</span>
-          </label>
-
-          <!-- Submit Button -->
-          <div class="sm:col-span-2 space-y-4">
+        <!-- Forms -->
+        <div
+          class="tab-section space-y-6 bg-theme-gray border border-theme-input rounded-2xl sm:rounded-3xl mt-4 sm:mt-8 p-6 sm:p-8"
+        >
+          <!-- Tabs -->
+          <div
+            class="w-fit flex items-center gap-2 font-medium bg-theme-muted rounded-md p-1"
+          >
             <button
-              class="text-theme-primary hover:opacity-70 transition-all duration-200"
+              data-target="checkingBalance"
+              class="tab-btn text-sm bg-white rounded shadow-xs hover:bg-white hover:text-theme-foreground transition-all duration-200 py-1.5 px-3"
             >
-              Отправить повторно
+              Проверка баланса
             </button>
+            <button
+              data-target="topupBalance"
+              class="tab-btn text-sm text-theme-muted-foreground rounded hover:bg-white hover:text-theme-foreground transition-all duration-200 py-1.5 px-3"
+            >
+              Пополнить карту
+            </button>
+          </div>
 
-            <div class="flex flex-col-reverse sm:flex-row items-center gap-3">
-              <a
-                href="./registration.html"
-                class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-theme-foreground border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200"
+          <!-- Checking Balance -->
+          <form
+            action="#"
+            id="checkingBalance"
+            class="tab-content grid sm:grid-cols-2 gap-4"
+          >
+            <label for="cardNumber">
+              <span class="font-medium">Номер карты</span>
+              <input
+                type="text"
+                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
+                placeholder="0000000"
+                id="cardNumber"
+              />
+              <span class="text-theme-muted-foreground text-sm"
+                >7 цифр без пробелов</span
               >
-                Назад
-              </a>
-              <button
+            </label>
+            <label for="pinCode">
+              <span class="font-medium">Пин-код</span>
+              <input
+                type="password"
+                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
+                placeholder="****"
+                id="pinCode"
+              />
+              <span class="text-theme-muted-foreground text-sm">4 цифры</span>
+            </label>
+            <div class="sm:col-span-2 flex flex-col sm:flex-row gap-4 sm:gap-3">
+              <a
+                href=""
                 class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
               >
-                Подтвердить
+                Проверить баланс
+              </a>
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  class="size-3 fill-white group-hover:fill-theme-primary transition-all duration-200"
+              <!-- Balance -->
+              <div
+                class="w-full sm:flex-1 flex items-center gap-2 bg-theme-muted font-medium rounded-lg py-2 px-4"
+              >
+                <span class="text-sm text-theme-muted-foreground"
+                  >Баланс карты:</span
                 >
-                  <path
-                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-                  />
-                </svg>
-              </button>
+                <p class="">1 840 ед.</p>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+
+          <!-- Topup Balance -->
+          <form
+            action="#"
+            id="topupBalance"
+            class="tab-content hidden grid sm:grid-cols-2 gap-4"
+          >
+            <label for="cardNumber">
+              <span class="font-medium">Номер карты</span>
+              <input
+                type="text"
+                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
+                placeholder="0000000"
+                id="cardNumber"
+              />
+              <span class="text-theme-muted-foreground text-sm"
+                >7 цифр без пробелов</span
+              >
+            </label>
+            <label for="sum">
+              <span class="font-medium">Сумма пополнения</span>
+              <input
+                type="text"
+                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
+                placeholder="0"
+                id="sum"
+              />
+              <span class="text-theme-muted-foreground text-sm"
+                >Не более 14 500 рублей</span
+              >
+            </label>
+            <a
+              href="#"
+              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
+            >
+              Пополнить баланс
+            </a>
+          </form>
+        </div>
       </div>
     </main>
 
