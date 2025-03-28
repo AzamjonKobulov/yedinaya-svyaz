@@ -223,3 +223,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Video playing func.
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".video-container").forEach((container) => {
+    const video = container.querySelector(".video");
+    const playButton = container.querySelector(".play-button");
+    const overlay = container.querySelector(".video-overlay");
+
+    playButton.addEventListener("click", function () {
+      video.play();
+      playButton.style.display = "none";
+      overlay.style.opacity = "0";
+      setTimeout(() => (overlay.style.display = "none"), 300);
+    });
+
+    video.addEventListener("pause", function () {
+      playButton.style.display = "block";
+      overlay.style.opacity = "0.5";
+      overlay.style.display = "block";
+    });
+
+    video.addEventListener("play", function () {
+      playButton.style.display = "none";
+      overlay.style.opacity = "0";
+      setTimeout(() => (overlay.style.display = "none"), 300);
+    });
+  });
+});

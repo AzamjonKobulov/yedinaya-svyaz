@@ -703,177 +703,125 @@
         </div>
       </div>
 
-      <div class="w-full">
-        <!-- Info Banner -->
+      <!-- Infos -->
+      <div
+        class="text-sm sm:text-base text-theme-muted-foreground border border-theme-input rounded-2xl sm:rounded-3xl p-6 sm:p-8"
+      >
+        <!-- Title -->
         <div
-          class="border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden"
+          class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-theme-input border-dashed pb-4"
         >
-          <!-- Top -->
-          <div class="w-full h-[120px] sm:h-[150px] relative bg-cards p-6">
-            <!-- Card Brands -->
-            <div class="w-max relative z-10 bg-black/5 rounded-xl py-2 px-3">
-              <div class="flex items-center">
-                <img
-                  src="./assets/svgs/credit-card.svg"
-                  alt="Card"
-                  class="size-7 rounded-full -mr-2"
-                />
-                <img
-                  src="./assets/svgs/sber-credits.png"
-                  alt="SberCredits"
-                  class="size-7 rounded-full -mr-2"
-                />
-                <img
-                  src="./assets/svgs/sber-bank.svg"
-                  alt="SberBank"
-                  class="size-7 rounded-full -mr-2"
-                />
-                <img
-                  src="./assets/svgs/yoomoney.svg"
-                  alt="YooMoney"
-                  class="size-7 rounded-full -mr-2"
-                />
-              </div>
-            </div>
-            <h2 class="relative z-10 text-white mt-4">Работа с картами</h2>
-
-            <!-- Rounded BG -->
-            <img
-              src="./assets/svgs/rounded-bg-cards.svg"
-              alt="Rounded Background"
-              class="absolute top-0 left-0"
-            />
-
-            <!-- Cards Image -->
-            <img
-              src="./assets/svgs/card-img.svg"
-              alt="Rounded Background"
-              class="hidden xs:block absolute bottom-0 right-0"
-            />
-
-            <!-- Cards Image Mobile -->
-            <img
-              src="./assets/svgs/card-img-mobile.svg"
-              alt="Rounded Background"
-              class="xs:hidden shrink-0 absolute bottom-0 right-0"
-            />
-          </div>
-          <!-- Bottom -->
-          <div
-            class="space-y-2 sm:space-y-4 bg-theme-gray text-theme-muted-foreground text-sm sm:text-base p-6 sm:p-8"
+          <!-- Back Button -->
+          <a
+            href="./app.html"
+            class="w-fit border border-theme-input text-theme-foreground rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 py-2 px-4"
           >
-            <p>
-              Проверяйте и пополняйте баланс карты вплоть до максимального
-              баланса в 15 000 рублей
-            </p>
-            <p>
-              Если у вас еще нет карты, рекомендуем
-              <a href="./purchasing-card-1.html" class="text-theme-primary"
-                >купить ее через наш сайт</a
-              >
-              по минимальной цене.
-            </p>
+            Назад
+          </a>
+          <!-- Title -->
+          <div class="">
+            <h2>Инструкция по установке для Android</h2>
           </div>
         </div>
 
-        <!-- Forms -->
-        <div
-          class="tab-section space-y-6 bg-theme-gray border border-theme-input rounded-2xl sm:rounded-3xl mt-4 sm:mt-8 p-6 sm:p-8"
-        >
-          <!-- Tabs -->
-          <div
-            class="w-fit flex items-center gap-2 font-medium bg-theme-muted rounded-md p-1"
-          >
-            <button
-              data-target="checkingBalance"
-              class="tab-btn text-sm bg-white rounded shadow-xs hover:bg-white hover:text-theme-foreground transition-all duration-200 py-1.5 px-3"
+        <!-- Steps -->
+        <ul class="space-y-4 border-b border-theme-input border-dashed py-4">
+          <li class="space-y-2 flex gap-4">
+            <div
+              class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
             >
-              Проверка баланса
-            </button>
-            <button
-              data-target="topupBalance"
-              class="tab-btn text-sm text-theme-muted-foreground rounded hover:bg-white hover:text-theme-foreground transition-all duration-200 py-1.5 px-3"
+              1
+            </div>
+
+            <p>
+              Скачайте установочный файл приложения с
+              <a
+                href="#"
+                class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                >нашего сайта
+              </a>
+              или через
+
+              <a
+                href="#"
+                class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                >программу Рустор.
+              </a>
+            </p>
+          </li>
+          <li class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div
+                class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              >
+                2
+              </div>
+
+              <p>
+                Установите приложения, в случае необходимости дав разрешение на
+                «Установку из неизвестных источников» 
+              </p>
+            </div>
+
+            <ul class="list-disc pl-20">
+              <li>
+                Если скачали с нашего сайта, то нажмите «Открыть файл» в
+                уведомлении, которое появится после завершения загрузки или
+                перейдите в папку Downloads через файловый менеджер.
+              </li>
+              <li>
+                Если скачали через приложения Рустор просто следуйте
+                предложенным инструкциям
+              </li>
+            </ul>
+          </li>
+          <li class="space-y-2 flex gap-4">
+            <div
+              class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
             >
-              Пополнить карту
-            </button>
+              3
+            </div>
+
+            <p>
+              Запустите приложение Единая связь Softphone с ярлыка на рабочем
+              столе и можете сразу им пользоваться. В правом верхнем углу есть
+              кнопка в виде треугольника, если вам нужны настройки.
+            </p>
+          </li>
+        </ul>
+
+        <!-- Video  -->
+        <div class="space-y-4">
+          <!-- Video Container -->
+          <div class="space-y-4 pt-4">
+            <p>
+              Возможно, вам будет удобнее ознакомиться с подробным видео об
+              установке и настройке приложения.
+            </p>
+
+            <!-- Video Container -->
+            <div
+              class="video-container aspect-video relative grid place-content-center border border-theme-sidebar-border rounded-xl overflow-hidden"
+            >
+              <!-- Video Element -->
+              <video class="video absolute inset-0 size-full object-cover">
+                <source src="./assets/vids/video.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+              </video>
+
+              <!-- Play Button -->
+              <button
+                class="play-button relative hover:opacity-70 transition-all duration-200 z-20"
+              >
+                <img src="./assets/svgs/play.svg" alt="Play" />
+              </button>
+
+              <!-- Overlay -->
+              <div
+                class="video-overlay absolute inset-0 bg-black/50 transition-opacity"
+              ></div>
+            </div>
           </div>
-
-          <!-- Checking Balance -->
-          <form
-            action="#"
-            id="checkingBalance"
-            class="tab-content grid sm:grid-cols-2 gap-4"
-          >
-            <label for="cardNumber">
-              <span class="font-medium">Номер карты</span>
-              <input
-                type="text"
-                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="0000000"
-                id="cardNumber"
-              />
-              <span class="text-theme-muted-foreground text-sm"
-                >7 цифр без пробелов</span
-              >
-            </label>
-            <label for="pinCode">
-              <span class="font-medium">Пин-код</span>
-              <input
-                type="password"
-                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="****"
-                id="pinCode"
-              />
-              <span class="text-theme-muted-foreground text-sm">4 цифры</span>
-            </label>
-            <a
-              href="./checking-balance.html"
-              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
-            >
-              Проверить баланс
-            </a>
-          </form>
-
-          <!-- Topup Balance -->
-          <form
-            action="#"
-            id="topupBalance"
-            class="tab-content hidden grid sm:grid-cols-2 gap-4"
-          >
-            <label for="cardNumber">
-              <span class="font-medium">Номер карты</span>
-              <input
-                type="text"
-                class="w-full h-10 border border-theme-distructive rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="0000000"
-                id="cardNumber"
-              />
-              <!-- <span class="text-theme-muted-foreground text-sm"
-                >7 цифр без пробелов</span
-              > -->
-              <span class="text-theme-distructive text-sm"
-                >Карта не существует или еще не активирована</span
-              >
-            </label>
-            <label for="sum">
-              <span class="font-medium">Сумма пополнения</span>
-              <input
-                type="text"
-                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="0"
-                id="sum"
-              />
-              <span class="text-theme-muted-foreground text-sm"
-                >Не более 14 500 рублей</span
-              >
-            </label>
-            <a
-              href="#"
-              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
-            >
-              Пополнить баланс
-            </a>
-          </form>
         </div>
       </div>
     </main>

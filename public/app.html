@@ -709,33 +709,10 @@
           class="border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden"
         >
           <!-- Top -->
-          <div class="w-full h-[120px] sm:h-[150px] relative bg-cards p-6">
-            <!-- Card Brands -->
-            <div class="w-max relative z-10 bg-black/5 rounded-xl py-2 px-3">
-              <div class="flex items-center">
-                <img
-                  src="./assets/svgs/credit-card.svg"
-                  alt="Card"
-                  class="size-7 rounded-full -mr-2"
-                />
-                <img
-                  src="./assets/svgs/sber-credits.png"
-                  alt="SberCredits"
-                  class="size-7 rounded-full -mr-2"
-                />
-                <img
-                  src="./assets/svgs/sber-bank.svg"
-                  alt="SberBank"
-                  class="size-7 rounded-full -mr-2"
-                />
-                <img
-                  src="./assets/svgs/yoomoney.svg"
-                  alt="YooMoney"
-                  class="size-7 rounded-full -mr-2"
-                />
-              </div>
-            </div>
-            <h2 class="relative z-10 text-white mt-4">Работа с картами</h2>
+          <div
+            class="w-full h-[120px] sm:h-[150px] flex items-end relative bg-cards overflow-hidden p-6"
+          >
+            <h2 class="relative z-10 text-white mt-auto">Приложение</h2>
 
             <!-- Rounded BG -->
             <img
@@ -746,134 +723,236 @@
 
             <!-- Cards Image -->
             <img
-              src="./assets/svgs/card-img.svg"
+              src="./assets/svgs/android-windows.svg"
               alt="Rounded Background"
-              class="hidden xs:block absolute bottom-0 right-0"
+              class="hidden xs:block absolute -bottom-8 right-0"
             />
 
             <!-- Cards Image Mobile -->
             <img
-              src="./assets/svgs/card-img-mobile.svg"
+              src="./assets/svgs/android-windows-mobile.svg"
               alt="Rounded Background"
               class="xs:hidden shrink-0 absolute bottom-0 right-0"
             />
           </div>
           <!-- Bottom -->
           <div
-            class="space-y-2 sm:space-y-4 bg-theme-gray text-theme-muted-foreground text-sm sm:text-base p-6 sm:p-8"
+            class="space-y-2 sm:space-y-4 bg-theme-gray text-sm sm:text-base p-6 sm:p-8"
           >
-            <p>
-              Проверяйте и пополняйте баланс карты вплоть до максимального
-              баланса в 15 000 рублей
-            </p>
-            <p>
-              Если у вас еще нет карты, рекомендуем
-              <a href="./purchasing-card-1.html" class="text-theme-primary"
-                >купить ее через наш сайт</a
-              >
-              по минимальной цене.
+            <p class="text-theme-muted-foreground">
+              Общайтесь через голосовой и видео звонок по минимальному тарифу в
+              1,50 рублей за минуту в 5 простых шагов
             </p>
           </div>
         </div>
 
-        <!-- Forms -->
+        <!-- Infos -->
         <div
-          class="tab-section space-y-6 bg-theme-gray border border-theme-input rounded-2xl sm:rounded-3xl mt-4 sm:mt-8 p-6 sm:p-8"
+          class="text-sm sm:text-base text-theme-muted-foreground border border-theme-input rounded-2xl sm:rounded-3xl mt-4 sm:mt-8 p-6 sm:p-8"
         >
-          <!-- Tabs -->
-          <div
-            class="w-fit flex items-center gap-2 font-medium bg-theme-muted rounded-md p-1"
-          >
-            <button
-              data-target="checkingBalance"
-              class="tab-btn text-sm bg-white rounded shadow-xs hover:bg-white hover:text-theme-foreground transition-all duration-200 py-1.5 px-3"
-            >
-              Проверка баланса
-            </button>
-            <button
-              data-target="topupBalance"
-              class="tab-btn text-sm text-theme-muted-foreground rounded hover:bg-white hover:text-theme-foreground transition-all duration-200 py-1.5 px-3"
-            >
-              Пополнить карту
-            </button>
+          <!-- Steps -->
+          <ul class="space-y-4 border-b border-theme-input border-dashed pb-4">
+            <li class="space-y-2">
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+                >
+                  1
+                </div>
+
+                <p class="text-theme-foreground">
+                  Скачайте и установите приложение
+                </p>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-2 pl-14">
+                <!-- Windows -->
+                <div class="space-y-2">
+                  <button
+                    class="group w-full flex items-center gap-3 text-sm font-medium border border-theme-input rounded-lg hover:border-theme-primary transition-all duration-200 p-2.5"
+                  >
+                    <svg
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.375 16.875L11.125 15.7422V11.25H17.375V16.875Z"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.625 15.2813L3.625 14.375V11.25H8.625V15.2813Z"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.375 3.125L11.125 4.25781V8.75H17.375V3.125Z"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.625 4.71875L3.625 5.625V8.75H8.625V4.71875Z"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span
+                      class="text-theme-foreground group-hover:text-theme-primary transition-all duration-200"
+                      >Windows</span
+                    >
+                  </button>
+                  <a
+                    href="./instruction-windows.html"
+                    class="text-theme-primary text-sm hover:opacity-70 transition-all duration-200"
+                    >Инструкция</a
+                  >
+                </div>
+                <!-- Android -->
+                <div class="space-y-2">
+                  <button
+                    class="group w-full flex items-center gap-3 text-sm font-medium border border-theme-input rounded-lg hover:border-theme-primary transition-all duration-200 p-2.5"
+                  >
+                    <svg
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.3125 13.125C13.8303 13.125 14.25 12.7053 14.25 12.1875C14.25 11.6697 13.8303 11.25 13.3125 11.25C12.7947 11.25 12.375 11.6697 12.375 12.1875C12.375 12.7053 12.7947 13.125 13.3125 13.125Z"
+                        fill="#009966"
+                      />
+                      <path
+                        d="M7.6875 13.125C8.20527 13.125 8.625 12.7053 8.625 12.1875C8.625 11.6697 8.20527 11.25 7.6875 11.25C7.16973 11.25 6.75 11.6697 6.75 12.1875C6.75 12.7053 7.16973 13.125 7.6875 13.125Z"
+                        fill="#009966"
+                      />
+                      <path
+                        d="M2.375 15.0001V13.211C2.375 8.71881 5.98437 5.01569 10.4687 5.00006C11.5384 4.99595 12.5983 5.20307 13.5877 5.60955C14.577 6.01602 15.4764 6.61386 16.2342 7.36874C16.992 8.12363 17.5933 9.02071 18.0035 10.0085C18.4138 10.9963 18.625 12.0554 18.625 13.1251V15.0001C18.625 15.1658 18.5592 15.3248 18.4419 15.442C18.3247 15.5592 18.1658 15.6251 18 15.6251H3C2.83424 15.6251 2.67527 15.5592 2.55806 15.442C2.44085 15.3248 2.375 15.1658 2.375 15.0001Z"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3 4.375L5.42969 6.80469"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M18 4.375L15.5859 6.78906"
+                        stroke="#009966"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <span
+                      class="text-theme-foreground group-hover:text-theme-primary transition-all duration-200"
+                      >Android</span
+                    >
+                  </button>
+                  <a
+                    href="./instruction-android.html"
+                    class="text-theme-primary text-sm hover:opacity-70 transition-all duration-200"
+                    >Инструкция</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="space-y-2 flex gap-4">
+              <div
+                class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              >
+                2
+              </div>
+
+              <p>
+                <a
+                  href="#"
+                  class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                  >Зарегистрируйтесь</a
+                >
+
+                или
+                <a
+                  href="#"
+                  class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                  >войдите</a
+                >
+                на сайт и перейдите в Личный кабинет.
+              </p>
+            </li>
+            <li class="space-y-2 flex gap-4">
+              <div
+                class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              >
+                3
+              </div>
+
+              <p>
+                Запустите приложение и введите указанные в  Личном кабинете Имя
+                пользователя и Пароль.
+              </p>
+            </li>
+            <li class="space-y-2 flex gap-4">
+              <div
+                class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              >
+                4
+              </div>
+
+              <p>
+                Убедитесь, что заключенный знает ваше Имя пользователя в формате
+                00НомерСотовогоТелефона
+              </p>
+            </li>
+            <li class="space-y-2 flex gap-4">
+              <div
+                class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              >
+                5
+              </div>
+
+              <p>
+                Ждите звонка от заключенного и ответьте на него. По желанию
+                включите видео и общайтесь.
+              </p>
+            </li>
+          </ul>
+
+          <!-- Texts -->
+          <div class="space-y-4 pt-4">
+            <p>
+              Также убедитесь, что у вас достаточная скорость интернета,
+              нормально работают камера и микрофон. Для этого можете совершить 2
+              тестовых звонка до 22:00 по Саратовскому времени
+            </p>
+
+            <ul class="list-disc pl-7">
+              <li>
+                Позвоните по номеру 001 и начните говорить в микрофон, если все
+                впорядке, то сразу же вы должны услышать себя самого как эхо и
+                увидеть на камере на весь экран.
+              </li>
+              <li>
+                Позвоните по номеру 002 и какое-то время поговорите, затем после
+                сигнала вы должны услышать запись вашего голоса и увидеть себя
+                на камере.
+              </li>
+            </ul>
+            <p class="text-orange-600">
+              Если вы не слышите и не видите себя, <br />
+              то проверьте работоспособность микрофона, камеры и интернета.
+            </p>
           </div>
-
-          <!-- Checking Balance -->
-          <form
-            action="#"
-            id="checkingBalance"
-            class="tab-content grid sm:grid-cols-2 gap-4"
-          >
-            <label for="cardNumber">
-              <span class="font-medium">Номер карты</span>
-              <input
-                type="text"
-                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="0000000"
-                id="cardNumber"
-              />
-              <span class="text-theme-muted-foreground text-sm"
-                >7 цифр без пробелов</span
-              >
-            </label>
-            <label for="pinCode">
-              <span class="font-medium">Пин-код</span>
-              <input
-                type="password"
-                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="****"
-                id="pinCode"
-              />
-              <span class="text-theme-muted-foreground text-sm">4 цифры</span>
-            </label>
-            <a
-              href="./checking-balance.html"
-              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
-            >
-              Проверить баланс
-            </a>
-          </form>
-
-          <!-- Topup Balance -->
-          <form
-            action="#"
-            id="topupBalance"
-            class="tab-content hidden grid sm:grid-cols-2 gap-4"
-          >
-            <label for="cardNumber">
-              <span class="font-medium">Номер карты</span>
-              <input
-                type="text"
-                class="w-full h-10 border border-theme-distructive rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="0000000"
-                id="cardNumber"
-              />
-              <!-- <span class="text-theme-muted-foreground text-sm"
-                >7 цифр без пробелов</span
-              > -->
-              <span class="text-theme-distructive text-sm"
-                >Карта не существует или еще не активирована</span
-              >
-            </label>
-            <label for="sum">
-              <span class="font-medium">Сумма пополнения</span>
-              <input
-                type="text"
-                class="w-full h-10 border border-theme-input rounded-lg outline-theme-primary placeholder:text-theme-muted-foreground my-1 px-3"
-                placeholder="0"
-                id="sum"
-              />
-              <span class="text-theme-muted-foreground text-sm"
-                >Не более 14 500 рублей</span
-              >
-            </label>
-            <a
-              href="#"
-              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
-            >
-              Пополнить баланс
-            </a>
-          </form>
         </div>
       </div>
     </main>
