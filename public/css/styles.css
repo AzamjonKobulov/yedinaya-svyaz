@@ -669,6 +669,9 @@ input{
 .h-full{
   height: 100%;
 }
+.h-\[38px\]{
+  height: 38px;
+}
 .w-\[131px\]{
   width: 131px;
 }
@@ -700,6 +703,9 @@ input{
 }
 .max-w-base{
   max-width: 1280px;
+}
+.max-w-\[311px\]{
+  max-width: 311px;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -1054,6 +1060,22 @@ input{
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+.py-\[26px\]{
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.py-\[25px\]{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.py-\[25\.5px\]{
+  padding-top: 25.5px;
+  padding-bottom: 25.5px;
 }
 .pb-3{
   padding-bottom: 0.75rem;
