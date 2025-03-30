@@ -64,3 +64,13 @@
 .menu-link.active svg {
   @apply stroke-theme-primary;
 }
+
+.hs-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.hs-accordion.active .hs-accordion-content {
+  max-height: 500px; /* A large enough value */
+}

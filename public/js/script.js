@@ -251,3 +251,71 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// FAQ Accordion
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionGroups = document.querySelectorAll(".hs-accordion-group");
+
+  accordionGroups.forEach((group) => {
+    const accordions = group.querySelectorAll(".hs-accordion");
+
+    accordions.forEach((accordion) => {
+      const toggleButton = accordion.querySelector(".hs-accordion-toggle");
+      const content = accordion.querySelector(".hs-accordion-content");
+      const icon = toggleButton.querySelector("svg"); // Select the SVG itself
+
+      toggleButton.addEventListener("click", () => {
+        const isOpen = accordion.classList.contains("active");
+
+        // Close all other accordions in the group
+        accordions.forEach((otherAccordion) => {
+          if (
+            otherAccordion !== accordion &&
+            otherAccordion.classList.contains("active")
+          ) {
+            closeAccordion(otherAccordion);
+          }
+        });
+
+        if (isOpen) {
+          closeAccordion(accordion);
+        } else {
+          openAccordion(accordion);
+        }
+      });
+
+      // Ensure initial state is set correctly
+      if (accordion.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        accordion.classList.add("border-theme-primary");
+        icon.style.transform = "rotate(180deg)";
+      } else {
+        content.style.maxHeight = "0px";
+        icon.style.transform = "rotate(0deg)";
+      }
+    });
+
+    function openAccordion(accordion) {
+      const content = accordion.querySelector(".hs-accordion-content");
+      const icon = accordion.querySelector("svg");
+
+      accordion.classList.add("active", "border-theme-primary");
+      content.style.maxHeight = content.scrollHeight + "px";
+      icon.style.transform = "rotate(180deg)";
+    }
+
+    function closeAccordion(accordion) {
+      const content = accordion.querySelector(".hs-accordion-content");
+      const icon = accordion.querySelector("svg");
+
+      accordion.classList.remove("active", "border-theme-primary");
+      content.style.maxHeight = "0px";
+      icon.style.transform = "rotate(0deg)";
+    }
+  });
+});
+
+// Check Balance
+document.querySelector(".check-balance").addEventListener("click", function () {
+  document.querySelector(".balance").classList.remove("hidden");
+});

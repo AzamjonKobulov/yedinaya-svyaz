@@ -32,7 +32,7 @@ module.exports = {
           "sea-blue": "#0FE0C8",
           "chart-4": "#E8C468",
           "chart-5": "#F4A462",
-          gray: "#F8FAFC",
+          "primary-foreground": "#F8FAFC",
         },
       },
       backgroundImage: {

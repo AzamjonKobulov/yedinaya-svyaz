@@ -395,111 +395,364 @@
         </div>
       </div>
 
-      <!-- Infos -->
-      <div
-        class="text-sm sm:text-base text-theme-muted-foreground border border-theme-input rounded-2xl sm:rounded-3xl p-6 sm:p-8"
-      >
-        <!-- Title -->
+      <div class="w-full">
+        <!-- Info Banner -->
         <div
-          class="flex flex-col sm:flex-row sm:items-center gap-4 border-b border-theme-input border-dashed pb-4"
+          class="border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden"
         >
-          <!-- Back Button -->
-          <a
-            href="./app.html"
-            class="w-fit border border-theme-input text-theme-foreground rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 py-2 px-4"
+          <!-- Top -->
+          <div
+            class="w-full h-[120px] sm:h-[150px] flex items-end relative bg-cards overflow-hidden p-6"
           >
-            Назад
-          </a>
-          <!-- Title -->
-          <div class="">
-            <h2>Инструкция по установке для Android</h2>
+            <h2 class="relative z-10 text-theme-primary-foreground mt-auto">
+              Справка и поддержка
+            </h2>
+
+            <!-- Rounded BG -->
+            <img
+              src="./assets/svgs/rounded-bg-cards.svg"
+              alt="Rounded Background"
+              class="absolute top-0 left-0"
+            />
+
+            <!-- Question Marks -->
+            <img
+              src="./assets/svgs/questions.svg"
+              alt="Rounded Background"
+              class="hidden xs:block absolute bottom-0 right-0"
+            />
+
+            <!-- Question Marks Mobile -->
+            <img
+              src="./assets/svgs/questions-mobile.svg"
+              alt="Rounded Background"
+              class="xs:hidden shrink-0 absolute bottom-0 right-0"
+            />
+          </div>
+          <!-- Bottom -->
+          <div
+            class="space-y-2 sm:space-y-4 bg-theme-primary-foreground text-sm sm:text-base p-6 sm:p-8"
+          >
+            <p class="text-theme-muted-foreground">
+              Возможно, на ваш вопрос уже есть ответ и вам будет полезно
+              прочитать блок «Вопросы и ответы» ниже.
+            </p>
+            <a
+              href="./asking-question.html"
+              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
+            >
+              Задать вопрос
+            </a>
           </div>
         </div>
 
-        <!-- Steps -->
-        <ul class="space-y-4 border-b border-theme-input border-dashed py-4">
-          <li class="space-y-2 flex gap-4">
+        <!-- Infos -->
+        <div
+          class="space-y-4 text-sm sm:text-base text-theme-muted-foreground border border-theme-input rounded-2xl sm:rounded-3xl mt-4 sm:mt-8 p-6 sm:p-8"
+        >
+          <h2>Вопросы и ответы</h2>
+
+          <div class="hs-accordion-group space-y-4">
+            <!-- Accordion Item 1 -->
             <div
-              class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-1"
             >
-              1
-            </div>
-
-            <p>
-              Скачайте установочный файл приложения с
-              <a
-                href="#"
-                class="text-theme-primary hover:opacity-70 transition-all duration-200"
-                >нашего сайта
-              </a>
-              или через
-
-              <a
-                href="#"
-                class="text-theme-primary hover:opacity-70 transition-all duration-200"
-                >программу Рустор.
-              </a>
-            </p>
-          </li>
-          <li class="space-y-4">
-            <div class="flex items-center gap-4">
-              <div
-                class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-1"
               >
-                2
+                <span class="font-medium text-theme-foreground"
+                  >Как зарегистрироваться?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-1"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-1"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
               </div>
-
-              <p>
-                Установите приложения, в случае необходимости дав разрешение на
-                «Установку из неизвестных источников» 
-              </p>
             </div>
-
-            <ul class="list-disc pl-20">
-              <li>
-                Если скачали с нашего сайта, то нажмите «Открыть файл» в
-                уведомлении, которое появится после завершения загрузки или
-                перейдите в папку Downloads через файловый менеджер.
-              </li>
-              <li>
-                Если скачали через приложения Рустор просто следуйте
-                предложенным инструкциям
-              </li>
-            </ul>
-          </li>
-          <li class="space-y-2 flex gap-4">
+            <!-- Accordion Item 2 -->
             <div
-              class="size-10 shrink-0 grid place-content-center text-sm font-medium text-theme-foreground border border-theme-input rounded-full"
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-2"
             >
-              3
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-2"
+              >
+                <span class="font-medium text-theme-foreground"
+                  >Как можно позвонить заключенному?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-2"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-2"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
+              </div>
             </div>
-
-            <p>
-              Запустите приложение Единая связь Softphone с ярлыка на рабочем
-              столе и можете сразу им пользоваться. В правом верхнем углу есть
-              кнопка в виде треугольника, если вам нужны настройки.
-            </p>
-          </li>
-        </ul>
-
-        <div class="space-y-4">
-          <div class="space-y-4 pt-4">
-            <p>
-              Возможно, вам будет удобнее ознакомиться с подробным видео об
-              установке и настройке приложения.
-            </p>
-
-            <!-- Video -->
-            <div class="aspect-video rounded-xl overflow-hidden">
-              <iframe
-                src="https://rutube.ru/play/embed/15e750992f650addc166f75260f58920"
-                frameborder="0"
-                allow="clipboard-write; autoplay"
-                webkitAllowFullScreen
-                mozallowfullscreen
-                allowfullscreen
-                class="size-full object-cover"
-              ></iframe>
+            <!-- Accordion Item 3 -->
+            <div
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-3"
+            >
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-3"
+              >
+                <span class="font-medium text-theme-foreground"
+                  >Сколько стоят звонки?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-3"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-3"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
+              </div>
+            </div>
+            <!-- Accordion Item 4 -->
+            <div
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-4"
+            >
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-4"
+              >
+                <span class="font-medium text-theme-foreground"
+                  >Как купить карту оплаты?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-4"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-4"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
+              </div>
+            </div>
+            <!-- Accordion Item 5 -->
+            <div
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-5"
+            >
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-5"
+              >
+                <span class="font-medium text-theme-foreground"
+                  >Как проверить и пополнить баланс карты?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-5"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-5"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
+              </div>
+            </div>
+            <!-- Accordion Item 6 -->
+            <div
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-6"
+            >
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-6"
+              >
+                <span class="font-medium text-theme-foreground"
+                  >Как установить приложение?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-6"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-6"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
+              </div>
+            </div>
+            <!-- Accordion Item 7 -->
+            <div
+              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
+              id="hs-basic-heading-7"
+            >
+              <button
+                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
+                aria-expanded="true"
+                aria-controls="hs-basic-collapse-7"
+              >
+                <span class="font-medium text-theme-foreground"
+                  >Как войти в приложение?</span
+                >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="plus-icon transition-all duration-200"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#020618"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                id="hs-basic-collapse-7"
+                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
+                role="region"
+                aria-labelledby="hs-basic-heading-7"
+              >
+                <p class="lg:mt-3 text-theme-foreground mt-4">
+                  Только сам заключенный может позвонить вам на телефон или
+                  приложение. Убедитесь, что он знает ваш номер телефона или имя
+                  пользователя в приложении (00НомерСотовогоТелефона)
+                </p>
+              </div>
             </div>
           </div>
         </div>
