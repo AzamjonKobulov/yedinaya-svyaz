@@ -314,8 +314,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// Check Balance
-document.querySelector(".check-balance").addEventListener("click", function () {
-  document.querySelector(".balance").classList.remove("hidden");
-});

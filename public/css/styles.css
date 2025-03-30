@@ -592,9 +592,6 @@ input{
 .relative{
   position: relative;
 }
-.sticky{
-  position: sticky;
-}
 .inset-0{
   inset: 0px;
 }
@@ -746,9 +743,6 @@ input{
 .w-\[350px\]{
   width: 350px;
 }
-.w-\[373px\]{
-  width: 373px;
-}
 .w-fit{
   width: -moz-fit-content;
   width: fit-content;
@@ -762,9 +756,6 @@ input{
 }
 .max-w-\[311px\]{
   max-width: 311px;
-}
-.max-w-\[373px\]{
-  max-width: 373px;
 }
 .max-w-base{
   max-width: 1280px;
@@ -865,11 +856,6 @@ input{
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
-}
-.space-y-16 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
@@ -1008,9 +994,6 @@ input{
 }
 .bg-black\/5{
   background-color: rgb(0 0 0 / 0.05);
-}
-.bg-black\/50{
-  background-color: rgb(0 0 0 / 0.5);
 }
 .bg-blue-50{
   --tw-bg-opacity: 1;
@@ -1305,11 +1288,6 @@ input{
 }
 .transition-all{
   transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-.transition-opacity{
-  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1697,22 +1675,16 @@ input{
     gap: 1.5rem;
   }
 
-  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:space-x-16 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(4rem * var(--tw-space-x-reverse));
-    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .lg\:space-y-16 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:bg-theme-muted{
