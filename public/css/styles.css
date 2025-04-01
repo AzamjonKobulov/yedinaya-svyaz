@@ -1681,10 +1681,6 @@ input{
     border-width: 0px;
   }
 
-  .sm\:border-none{
-    border-style: none;
-  }
-
   .sm\:p-0{
     padding: 0px;
   }
@@ -1712,20 +1708,16 @@ input{
     padding-bottom: 2rem;
   }
 
+  .sm\:pb-0{
+    padding-bottom: 0px;
+  }
+
   .sm\:pl-5{
     padding-left: 1.25rem;
   }
 
   .sm\:pr-0{
     padding-right: 0px;
-  }
-
-  .sm\:pb-0{
-    padding-bottom: 0px;
-  }
-
-  .sm\:pt-4{
-    padding-top: 1rem;
   }
 
   .sm\:text-start{
