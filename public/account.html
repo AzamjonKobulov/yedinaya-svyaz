@@ -87,7 +87,7 @@
       <!-- Menu -->
       <div
         id="mobMenu"
-        class="fade-in fixed lg:static z-50 inset-x-0 bottom-0 top-14 lg:w-[373px] lg:shrink-0 flex flex-col justify-between hidden lg:block bg-white space-y-5 lg:space-y-16 py-4 px-2 lg:p-0"
+        class="fade-in lg:animate-none fixed lg:static z-50 inset-x-0 bottom-0 top-14 lg:w-[373px] lg:shrink-0 flex flex-col justify-between hidden lg:block bg-white space-y-5 lg:space-y-16 py-4 px-2 lg:p-0"
       >
         <!-- Links -->
         <ul class="space-y-4 text-theme-muted-foreground">
@@ -230,9 +230,7 @@
               <div class="">
                 <p
                   class="font-semibold group-hover:text-theme-foreground transition-all duration-200"
-                >
-                  Приложение
-                </p>
+                ></p>
                 <p
                   class="text-sm group-hover:text-theme-foreground transition-all duration-200"
                 >
@@ -408,7 +406,9 @@
                 Иванов Иван Иванович!
               </h2>
 
-              <button class="text-sm text-theme-muted-foreground">
+              <button
+                class="hidden sm:block text-sm text-theme-muted-foreground"
+              >
                 Выйти из аккаунта
               </button>
             </div>
@@ -442,7 +442,445 @@
           <!-- Infos -->
           <div
             class="space-y-2 sm:space-y-4 text-sm sm:text-base border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden p-6 sm:p-8"
-          ></div>
+          >
+            <div class="mb-4">
+              <h3
+                class="border-b border-theme-sidebar-border border-dashed pb-4"
+              >
+                Ваши данные
+              </h3>
+
+              <!-- Name & Password Section -->
+              <div
+                class="space-y-4 border-b border-theme-sidebar-border border-dashed pb-4 py-4"
+              >
+                <h5>Для входа в приложение</h5>
+                <div class="flex items-center gap-6">
+                  <!-- Username -->
+                  <div class="space-y-2">
+                    <p class="text-theme-muted-foreground">Имя</p>
+                    <div class="flex items-center gap-2">
+                      <p id="username">0071111111111</p>
+                      <button onclick="copyToClipboard('username', this)">
+                        <img
+                          src="./assets/svgs/copy.svg"
+                          alt="Copy icon"
+                          class="copy-icon"
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-5 stroke-theme-primary hidden tick-icon"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Password -->
+                  <div class="space-y-2">
+                    <p class="text-theme-muted-foreground">Пароль</p>
+                    <div class="flex items-center gap-2">
+                      <p
+                        id="password"
+                        data-hidden="true"
+                        data-password="MySecret123"
+                      >
+                        •••••••••••
+                      </p>
+                      <button onclick="togglePassword(this)">
+                        <img
+                          src="./assets/svgs/eye.svg"
+                          alt="Eye icon"
+                          class="eye-icon"
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-5 stroke-theme-primary hidden eye-slash-icon"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                          />
+                        </svg>
+                      </button>
+                      <button onclick="copyToClipboard('password', this)">
+                        <img
+                          src="./assets/svgs/copy.svg"
+                          alt="Copy icon"
+                          class="copy-icon"
+                        />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-5 stroke-theme-primary hidden tick-icon"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-4 pt-4">
+                <h5>Для входа на сайт</h5>
+
+                <!-- Name & Password Content -->
+                <div id="view-mode">
+                  <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+                    <div class="space-y-2">
+                      <p class="text-theme-muted-foreground">ФИО</p>
+                      <div class="flex items-center gap-2">
+                        <p id="view-fullName">Петров Сергей Геннадьевич</p>
+                      </div>
+                    </div>
+
+                    <div class="space-y-2">
+                      <p class="text-theme-muted-foreground">Email</p>
+                      <div class="flex items-center gap-2">
+                        <p id="view-email">serg88@yandex.ru</p>
+                      </div>
+                    </div>
+
+                    <div class="space-y-2">
+                      <p class="text-theme-muted-foreground">Телефон</p>
+                      <div class="flex items-center gap-2">
+                        <p id="view-phone">+79876543210</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    id="edit-btn"
+                    class="w-full sm:w-auto text-sm font-medium border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 mt-4 py-2 px-3"
+                  >
+                    Редактировать
+                  </button>
+                </div>
+
+                <!-- Editing Content -->
+                <div id="edit-mode" class="hidden">
+                  <form
+                    action="#"
+                    class="flex flex-col sm:flex-row sm:items-center gap-6"
+                  >
+                    <label class="w-full space-y-2">
+                      <span>ФИО</span>
+                      <input
+                        type="text"
+                        class="h-10 w-full border border-theme-input rounded-lg outline-theme-primary px-3"
+                        id="edit-fullName"
+                      />
+                    </label>
+                    <label class="w-full space-y-2">
+                      <span>Email</span>
+                      <input
+                        type="email"
+                        class="h-10 w-full border border-theme-input rounded-lg outline-theme-primary px-3"
+                        id="edit-email"
+                      />
+                    </label>
+                    <label class="w-full space-y-2">
+                      <span>Телефон</span>
+                      <input
+                        type="text"
+                        class="h-10 w-full border border-theme-input rounded-lg outline-theme-primary px-3"
+                        id="edit-phone"
+                      />
+                    </label>
+                  </form>
+
+                  <div
+                    class="flex flex-col-reverse sm:flex-row sm:items-center gap-2 mt-4"
+                  >
+                    <button
+                      id="cancel-btn"
+                      class="h-10 w-full sm:w-[150px] text-sm font-medium border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200"
+                    >
+                      Отмена
+                    </button>
+                    <button
+                      id="save-btn"
+                      class="h-10 w-full sm:w-[150px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
+                    >
+                      Сохранить
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infos -->
+          <div
+            class="space-y-2 sm:space-y-4 text-sm sm:text-base border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden p-6 sm:p-8"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-theme-sidebar-border border-dashed pb-4"
+            >
+              <h3
+                class="border-b border-theme-sidebar-border border-dashed pb-4"
+              >
+                Купленные карты
+              </h3>
+
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2 mt-4">
+                <a
+                  href="#"
+                  class="h-10 w-full sm:w-[150px] text-sm text-center font-medium border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 py-2"
+                >
+                  Добавить карту
+                </a>
+                <a
+                  href="./purchasing-card-1.html"
+                  class="h-10 w-full sm:w-[150px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
+                >
+                  Купить карту
+                </a>
+              </div>
+            </div>
+
+            <p class="text-sm sm:text-lg text-theme-muted-foreground">
+              Баланс можно увидеть только для карт, которые заключенный
+              активировал через терминал в исправительном учреждении.Баланс
+              обновляется каждые 10 минут, нажмите кнопку "Обновить" рядом с
+              балансом, если хотите увидеть актуальный баланс сейчас.
+            </p>
+
+            <!-- Cards -->
+            <div
+              class="grid xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 xl:gap-4 text-white"
+            >
+              <!-- Card 1 -->
+              <div class="card space-y-3 bg-card rounded-2xl p-6">
+                <!-- Logo -->
+                <img src="./assets/svgs/logo-icon.svg" alt="Logo icon" />
+
+                <!-- Card Number -->
+                <p class="font-bold font-plus">123 456 7</p>
+
+                <!-- User Info -->
+                <div class="h-[38px] flex items-center justify-between">
+                  <div class="font-plus">
+                    <p class="text-xs">Куплена</p>
+                    <p class="text-sm font-bold">12.12.2025</p>
+                  </div>
+                  <div class="font-plus">
+                    <p class="text-xs">Баланс</p>
+                    <p class="text-sm font-bold">1 763 ед.</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-white rounded-lg hover:opacity-70 transition-all duration-200 mt-auto p-1"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 8H13M13 8L9.25 4M13 8L9.25 12"
+                        stroke="#009966"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="card space-y-3 bg-card rounded-2xl p-6">
+                <!-- Logo -->
+                <img src="./assets/svgs/logo-icon.svg" alt="Logo icon" />
+
+                <!-- Card Number -->
+                <p class="font-bold font-plus">123 456 7</p>
+
+                <!-- User Info -->
+                <div class="h-[38px] flex items-center justify-between">
+                  <div class="font-plus">
+                    <p class="text-xs">Куплена</p>
+                    <p class="text-sm font-bold">12.12.2025</p>
+                  </div>
+                  <div class="font-plus">
+                    <p class="text-xs">Баланс</p>
+                    <p class="text-sm font-bold">1 763 ед.</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-white rounded-lg hover:opacity-70 transition-all duration-200 mt-auto p-1"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 8H13M13 8L9.25 4M13 8L9.25 12"
+                        stroke="#009966"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="card space-y-3 bg-card rounded-2xl p-6">
+                <!-- Logo -->
+                <img src="./assets/svgs/logo-icon.svg" alt="Logo icon" />
+
+                <!-- Card Number -->
+                <p class="font-bold font-plus">123 456 7</p>
+
+                <!-- User Info -->
+                <div class="h-[38px] flex items-center justify-between">
+                  <div class="font-plus">
+                    <p class="text-xs">Куплена</p>
+                    <p class="text-sm font-bold">12.12.2025</p>
+                  </div>
+                  <div class="font-plus">
+                    <p class="text-xs">Баланс</p>
+                    <p class="text-sm font-bold">1 763 ед.</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-white rounded-lg hover:opacity-70 transition-all duration-200 mt-auto p-1"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 8H13M13 8L9.25 4M13 8L9.25 12"
+                        stroke="#009966"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="card hidden space-y-3 bg-card rounded-2xl p-6">
+                <!-- Logo -->
+                <img src="./assets/svgs/logo-icon.svg" alt="Logo icon" />
+
+                <!-- Card Number -->
+                <p class="font-bold font-plus">123 456 7</p>
+
+                <!-- User Info -->
+                <div class="h-[38px] flex items-center justify-between">
+                  <div class="font-plus">
+                    <p class="text-xs">Куплена</p>
+                    <p class="text-sm font-bold">12.12.2025</p>
+                  </div>
+                  <div class="font-plus">
+                    <p class="text-xs">Баланс</p>
+                    <p class="text-sm font-bold">1 763 ед.</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-white rounded-lg hover:opacity-70 transition-all duration-200 mt-auto p-1"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 8H13M13 8L9.25 4M13 8L9.25 12"
+                        stroke="#009966"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="card hidden space-y-3 bg-card rounded-2xl p-6">
+                <!-- Logo -->
+                <img src="./assets/svgs/logo-icon.svg" alt="Logo icon" />
+
+                <!-- Card Number -->
+                <p class="font-bold font-plus">123 456 7</p>
+
+                <!-- User Info -->
+                <div class="h-[38px] flex items-center justify-between">
+                  <div class="font-plus">
+                    <p class="text-xs">Куплена</p>
+                    <p class="text-sm font-bold">12.12.2025</p>
+                  </div>
+                  <div class="font-plus">
+                    <p class="text-xs">Баланс</p>
+                    <p class="text-sm font-bold">1 763 ед.</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="bg-white rounded-lg hover:opacity-70 transition-all duration-200 mt-auto p-1"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 8H13M13 8L9.25 4M13 8L9.25 12"
+                        stroke="#009966"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Show More Button -->
+            <button
+              id="showMoreBtn"
+              class="h-10 w-full sm:w-[150px] text-sm text-center font-medium border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 px-3"
+            >
+              Показать еще <span id="hiddenCount"></span>
+            </button>
+          </div>
         </div>
       </div>
     </main>

@@ -314,3 +314,109 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Edit/Show User Info Modes Logic
+document.addEventListener("DOMContentLoaded", function () {
+  const viewMode = document.getElementById("view-mode");
+  const editMode = document.getElementById("edit-mode");
+  const editBtn = document.getElementById("edit-btn");
+  const cancelBtn = document.getElementById("cancel-btn");
+  const saveBtn = document.getElementById("save-btn");
+
+  const viewFullName = document.getElementById("view-fullName");
+  const viewEmail = document.getElementById("view-email");
+  const viewPhone = document.getElementById("view-phone");
+
+  const editFullName = document.getElementById("edit-fullName");
+  const editEmail = document.getElementById("edit-email");
+  const editPhone = document.getElementById("edit-phone");
+
+  editBtn.addEventListener("click", function () {
+    editFullName.value = viewFullName.textContent;
+    editEmail.value = viewEmail.textContent;
+    editPhone.value = viewPhone.textContent;
+    viewMode.classList.add("hidden");
+    editMode.classList.remove("hidden");
+  });
+
+  cancelBtn.addEventListener("click", function () {
+    editMode.classList.add("hidden");
+    viewMode.classList.remove("hidden");
+  });
+
+  saveBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    viewFullName.textContent = editFullName.value;
+    viewEmail.textContent = editEmail.value;
+    viewPhone.textContent = editPhone.value;
+    editMode.classList.add("hidden");
+    viewMode.classList.remove("hidden");
+  });
+});
+
+function copyToClipboard(id, btn) {
+  const element = document.getElementById(id);
+  const text =
+    element.dataset.hidden === "true"
+      ? element.dataset.password
+      : element.textContent;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const copyIcon = btn.querySelector(".copy-icon");
+    const tickIcon = btn.querySelector(".tick-icon");
+
+    copyIcon.classList.add("hidden");
+    tickIcon.classList.remove("hidden");
+
+    setTimeout(() => {
+      copyIcon.classList.remove("hidden");
+      tickIcon.classList.add("hidden");
+    }, 2000);
+  });
+}
+
+// Toggle Passoword visibility
+function togglePassword(btn) {
+  const passwordEl = document.getElementById("password");
+  const eyeIcon = btn.querySelector(".eye-icon");
+  const eyeSlashIcon = btn.querySelector(".eye-slash-icon");
+
+  if (passwordEl.dataset.hidden === "true") {
+    passwordEl.textContent = passwordEl.dataset.password;
+    passwordEl.dataset.hidden = "false";
+    eyeIcon.classList.add("hidden");
+    eyeSlashIcon.classList.remove("hidden");
+  } else {
+    passwordEl.textContent = "•••••••••••";
+    passwordEl.dataset.hidden = "true";
+    eyeIcon.classList.remove("hidden");
+    eyeSlashIcon.classList.add("hidden");
+  }
+}
+
+// Show/Hide Purchased cards
+function updateButtonText() {
+  const hiddenCards = document.querySelectorAll(".card.hidden").length;
+  const button = document.getElementById("showMoreBtn");
+
+  if (hiddenCards > 0) {
+    button.innerHTML = `Показать еще <span id="hiddenCount">${hiddenCards}</span>`;
+  } else {
+    button.innerHTML = "Скрыть";
+  }
+}
+
+document.getElementById("showMoreBtn").addEventListener("click", function () {
+  const hiddenCards = document.querySelectorAll(".card.hidden");
+
+  if (hiddenCards.length > 0) {
+    hiddenCards.forEach((card) => card.classList.remove("hidden"));
+  } else {
+    document
+      .querySelectorAll(".card:nth-child(n+4)")
+      .forEach((card) => card.classList.add("hidden"));
+  }
+  updateButtonText();
+});
+
+updateButtonText();

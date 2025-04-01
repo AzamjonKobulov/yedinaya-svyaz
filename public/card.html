@@ -230,9 +230,7 @@
               <div class="">
                 <p
                   class="font-semibold group-hover:text-theme-foreground transition-all duration-200"
-                >
-                  Приложение
-                </p>
+                ></p>
                 <p
                   class="text-sm group-hover:text-theme-foreground transition-all duration-200"
                 >
@@ -396,363 +394,365 @@
       </div>
 
       <div class="w-full">
-        <!-- Info Banner -->
-        <div
-          class="border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden"
-        >
-          <!-- Top -->
+        <!-- Card Informations -->
+        <div class="space-y-4 sm:space-y-8">
           <div
-            class="w-full h-[120px] sm:h-[150px] flex items-end relative bg-cards overflow-hidden p-6"
+            class="space-y-2 sm:space-y-4 text-sm sm:text-base border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden p-6 sm:p-8"
           >
-            <h2 class="relative z-10 text-theme-primary-foreground mt-auto">
-              Справка и поддержка
-            </h2>
+            <div
+              class="flex flex-col sm:flex-row justify-between sm:items-start gap-4"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <!-- Back Button -->
+                <a
+                  href="./account.html"
+                  class="w-fit border border-theme-input text-theme-foreground rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 py-2 px-4"
+                >
+                  Назад
+                </a>
+                <h2>Карта №34563456</h2>
+              </div>
 
-            <!-- Rounded BG -->
-            <img
-              src="./assets/svgs/rounded-bg-cards.svg"
-              alt="Rounded Background"
-              class="absolute top-0 left-0"
-            />
+              <a
+                href="./working-with-cards.html"
+                class="h-10 group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200 px-3"
+              >
+                Пополнить баланс
+              </a>
+            </div>
+            <div class="flex flex-col-reverse sm:flex-col space-y-4">
+              <div
+                class="space-y-4 text-sm sm:text-base text-theme-muted-foreground border-t border-theme-sidebar-border border-dashed pt-4"
+              >
+                <p>
+                  Баланс можно увидеть только для карт, которые заключенный
+                  активировал через терминал в исправительном учреждении. Баланс
+                  обновляется каждые 10 минут, нажмите кнопку "Обновить" рядом с
+                  балансом, если хотите увидеть актуальный баланс сейчас.
+                </p>
+              </div>
 
-            <!-- Question Marks -->
-            <img
-              src="./assets/svgs/questions.svg"
-              alt="Rounded Background"
-              class="hidden xs:block absolute bottom-0 right-0"
-            />
+              <div
+                class="flex flex-col sm:flex-row sm:items-center gap-6 border-t border-theme-sidebar-border border-dashed py-4 sm:pb-0"
+              >
+                <!-- Username -->
+                <div class="space-y-2">
+                  <p class="text-theme-muted-foreground">Куплена</p>
+                  <div class="flex items-center gap-2">
+                    <p id="username">12.12.2025</p>
+                    <button onclick="copyToClipboard('username', this)">
+                      <img
+                        src="./assets/svgs/copy.svg"
+                        alt="Copy icon"
+                        class="copy-icon shrink-0"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-5 shrink-0 stroke-theme-primary hidden tick-icon"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
 
-            <!-- Question Marks Mobile -->
-            <img
-              src="./assets/svgs/questions-mobile.svg"
-              alt="Rounded Background"
-              class="xs:hidden shrink-0 absolute bottom-0 right-0"
-            />
+                <!-- Password -->
+                <div class="space-y-2">
+                  <p class="text-theme-muted-foreground">Пароль</p>
+                  <div class="flex items-center gap-2">
+                    <p
+                      id="password"
+                      data-hidden="true"
+                      data-password="MySecret123"
+                    >
+                      •••••••••••
+                    </p>
+                    <button onclick="togglePassword(this)">
+                      <img
+                        src="./assets/svgs/eye.svg"
+                        alt="Eye icon"
+                        class="eye-icon shrink-0"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-5 stroke-theme-primary hidden eye-slash-icon shrink-0"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                        />
+                      </svg>
+                    </button>
+                    <button onclick="copyToClipboard('password', this)">
+                      <img
+                        src="./assets/svgs/copy.svg"
+                        alt="Copy icon"
+                        class="copy-icon shrink-0"
+                      />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-5 shrink-0 stroke-theme-primary hidden tick-icon"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Balance -->
+                <div class="space-y-2">
+                  <p class="text-theme-muted-foreground">Баланс</p>
+                  <div class="flex items-center gap-2">
+                    <p>1 732 ед</p>
+                    <button>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="shrink-0"
+                      >
+                        <path
+                          d="M2.9165 13.3333C4.0767 15.9822 6.9353 17.5 10.0184 17.5C13.917 17.5 17.1226 14.54 17.4998 10.75"
+                          stroke="#009966"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M6.25927 13H2.95111C2.70197 13 2.5 13.2015 2.5 13.45V16.75"
+                          stroke="#009966"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M17.0833 6.66667C15.9231 4.01781 13.0645 2.5 9.98138 2.5C6.08279 2.5 2.87722 5.46001 2.5 9.25"
+                          stroke="#009966"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M13.7407 7H17.0489C17.298 7 17.5 6.79853 17.5 6.55V3.25"
+                          stroke="#009966"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Bottom -->
+
+          <!-- Transactions -->
           <div
-            class="space-y-2 sm:space-y-4 bg-theme-primary-foreground text-sm sm:text-base p-6 sm:p-8"
+            class="space-y-2 sm:space-y-4 text-sm sm:text-base border border-theme-muted-input rounded-2xl sm:rounded-3xl overflow-hidden p-6 sm:p-8"
           >
-            <p class="text-theme-muted-foreground">
-              Возможно, на ваш вопрос уже есть ответ и вам будет полезно
-              прочитать блок «Вопросы и ответы» ниже.
-            </p>
-            <a
-              href="./asking-question.html"
-              class="h-10 w-full sm:w-[250px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
-            >
-              Задать вопрос
-            </a>
-          </div>
-        </div>
+            <div class="mb-4">
+              <h3
+                class="border-b border-theme-sidebar-border border-dashed pb-4"
+              >
+                История транзакций
+              </h3>
 
-        <!-- Infos -->
-        <div
-          class="space-y-4 text-sm sm:text-base text-theme-muted-foreground border border-theme-input rounded-2xl sm:rounded-3xl mt-4 sm:mt-8 p-6 sm:p-8"
-        >
-          <h2>Вопросы и ответы</h2>
+              <!-- Name & Password Section -->
+              <p class="text-sm sm:text-base text-theme-muted-foreground mt-4">
+                В истории отображаются только успешные платежи. Если с вас
+                списали деньги, но платеж не прошел, свяжитесь с нами в разделе
+                <a
+                  href="#"
+                  class="text-theme-primary hover:opacity-70 transition-all duration-200"
+                  >Справка и поддержка</a
+                >.
+              </p>
 
-          <div class="hs-accordion-group space-y-4">
-            <!-- Accordion Item 1 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-1"
-            >
-              <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-1"
-              >
-                <span class="font-medium text-theme-foreground"
-                  >Как зарегистрироваться?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
+              <!-- Transaction History -->
               <div
-                id="hs-basic-collapse-1"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-1"
+                class="text-sm sm:border border-theme-input sm:divide-y divide-theme-input rounded-3xl mt-4"
               >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
+                <!-- Header -->
+                <div
+                  class="hidden sm:flex items-center justify-between text-theme-muted-foreground font-medium"
+                >
+                  <!-- Date -->
+                  <div class="w-[150px] p-3">Дата и время</div>
+                  <div class="flex-1 p-3">Описание</div>
+                  <div class="w-[150px] p-3">Сумма</div>
+                </div>
+                <!-- Transactions -->
+                <div
+                  class="space-y-2 sm:space-y-0 sm:divide-y divide-theme-input"
+                >
+                  <!-- Transaction 1 -->
+                  <div
+                    class="flex items-stretch sm:items-start justify-between border sm:border-0 border-theme-input rounded-xl sm:rounded-none"
+                  >
+                    <div
+                      class="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 text-xs sm:text-sm p-3 sm:p-0"
+                    >
+                      <div
+                        class="w-[150px] text-theme-muted-foreground sm:text-theme-foreground sm:p-3"
+                      >
+                        12.12.2025 09:45
+                      </div>
+                      <div class="flex-1 sm:p-3">Пополнение баланса</div>
+                    </div>
+                    <div
+                      class="w-[150px] text-lime-600 text-end sm:text-start p-3"
+                    >
+                      + 500₽
+                    </div>
+                  </div>
+                  <!-- Transaction 2 -->
+                  <div
+                    class="flex items-stretch sm:items-start justify-between border sm:border-0 border-theme-input rounded-xl sm:rounded-none"
+                  >
+                    <div
+                      class="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 text-xs sm:text-sm p-3 sm:p-0"
+                    >
+                      <div
+                        class="w-[150px] text-theme-muted-foreground sm:text-theme-foreground sm:p-3"
+                      >
+                        12.12.2025 09:45
+                      </div>
+                      <div class="flex-1 sm:p-3">Списание</div>
+                    </div>
+                    <div
+                      class="w-[150px] text-rose-600 text-end sm:text-start p-3"
+                    >
+                      - 500₽
+                    </div>
+                  </div>
+                  <!-- Transaction 3 -->
+                  <div
+                    class="flex items-stretch sm:items-start justify-between border sm:border-0 border-theme-input rounded-xl sm:rounded-none"
+                  >
+                    <div
+                      class="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 text-xs sm:text-sm p-3 sm:p-0"
+                    >
+                      <div
+                        class="w-[150px] text-theme-muted-foreground sm:text-theme-foreground sm:p-3"
+                      >
+                        12.12.2025 09:45
+                      </div>
+                      <div class="flex-1 sm:p-3">Списание</div>
+                    </div>
+                    <div
+                      class="w-[150px] text-rose-600 text-end sm:text-start p-3"
+                    >
+                      - 500₽
+                    </div>
+                  </div>
+                  <!-- Transaction 4 -->
+                  <div
+                    class="flex items-stretch sm:items-start justify-between border sm:border-0 border-theme-input rounded-xl sm:rounded-none"
+                  >
+                    <div
+                      class="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 text-xs sm:text-sm p-3 sm:p-0"
+                    >
+                      <div
+                        class="w-[150px] text-theme-muted-foreground sm:text-theme-foreground sm:p-3"
+                      >
+                        12.12.2025 09:45
+                      </div>
+                      <div class="flex-1 sm:p-3">Пополнение баланса</div>
+                    </div>
+                    <div
+                      class="w-[150px] text-lime-600 text-end sm:text-start p-3"
+                    >
+                      + 500₽
+                    </div>
+                  </div>
+                  <!-- Transaction 5 -->
+                  <div
+                    class="flex items-stretch sm:items-start justify-between border sm:border-0 border-theme-input rounded-xl sm:rounded-none"
+                  >
+                    <div
+                      class="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 text-xs sm:text-sm p-3 sm:p-0"
+                    >
+                      <div
+                        class="w-[150px] text-theme-muted-foreground sm:text-theme-foreground sm:p-3"
+                      >
+                        12.12.2025 09:45
+                      </div>
+                      <div class="flex-1 sm:p-3">Пополнение баланса</div>
+                    </div>
+                    <div
+                      class="w-[150px] text-lime-600 text-end sm:text-start p-3"
+                    >
+                      + 500₽
+                    </div>
+                  </div>
+                  <!-- Transaction 6 -->
+                  <div
+                    class="flex items-stretch sm:items-start justify-between border sm:border-0 border-theme-input rounded-xl sm:rounded-none"
+                  >
+                    <div
+                      class="flex-1 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-0 text-xs sm:text-sm p-3 sm:p-0"
+                    >
+                      <div
+                        class="w-[150px] text-theme-muted-foreground sm:text-theme-foreground sm:p-3"
+                      >
+                        12.12.2025 09:45
+                      </div>
+                      <div class="flex-1 sm:p-3">Списание</div>
+                    </div>
+                    <div
+                      class="w-[150px] text-rose-600 text-end sm:text-start p-3"
+                    >
+                      - 500₽
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <!-- Accordion Item 2 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-2"
-            >
-              <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-2"
-              >
-                <span class="font-medium text-theme-foreground"
-                  >Как можно позвонить заключенному?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
+
+              <!-- Pagination -->
               <div
-                id="hs-basic-collapse-2"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-2"
+                class="hidden sm:flex items-center justify-center gap-2 text-sm mt-4"
               >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
+                <button
+                  class="size-10 shrink-0 border border-theme-input rounded-md"
+                >
+                  1
+                </button>
+                <button class="size-10 shrink-0">2</button>
+                <button class="size-10 shrink-0">...</button>
+                <button class="size-10 shrink-0">14</button>
+                <button class="size-10 shrink-0">15</button>
               </div>
-            </div>
-            <!-- Accordion Item 3 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-3"
-            >
+
+              <!-- Show More Button -->
               <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-3"
+                class="h-10 w-full sm:hidden text-sm text-center font-medium border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 mt-4 px-3"
               >
-                <span class="font-medium text-theme-foreground"
-                  >Сколько стоят звонки?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                Показать еще
               </button>
-              <div
-                id="hs-basic-collapse-3"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-3"
-              >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
-              </div>
-            </div>
-            <!-- Accordion Item 4 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-4"
-            >
-              <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-4"
-              >
-                <span class="font-medium text-theme-foreground"
-                  >Как купить карту оплаты?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <div
-                id="hs-basic-collapse-4"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-4"
-              >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
-              </div>
-            </div>
-            <!-- Accordion Item 5 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-5"
-            >
-              <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-5"
-              >
-                <span class="font-medium text-theme-foreground"
-                  >Как проверить и пополнить баланс карты?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <div
-                id="hs-basic-collapse-5"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-5"
-              >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
-              </div>
-            </div>
-            <!-- Accordion Item 6 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-6"
-            >
-              <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-6"
-              >
-                <span class="font-medium text-theme-foreground"
-                  >Как установить приложение?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <div
-                id="hs-basic-collapse-6"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-6"
-              >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
-              </div>
-            </div>
-            <!-- Accordion Item 7 -->
-            <div
-              class="hs-accordion relative bg-theme-primary-foreground text-sm border border-theme-input rounded-2xl p-4"
-              id="hs-basic-heading-7"
-            >
-              <button
-                class="hs-accordion-toggle inline-flex items-center justify-between gap-3 w-full text-start"
-                aria-expanded="true"
-                aria-controls="hs-basic-collapse-7"
-              >
-                <span class="font-medium text-theme-foreground"
-                  >Как войти в приложение?</span
-                >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="plus-icon transition-all duration-200"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#020618"
-                    stroke-width="1.33333"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <div
-                id="hs-basic-collapse-7"
-                class="hs-accordion-content overflow-hidden transition-[height] duration-200"
-                role="region"
-                aria-labelledby="hs-basic-heading-7"
-              >
-                <p class="lg:mt-3 text-theme-foreground mt-4">
-                  Только сам заключенный может позвонить вам на телефон или
-                  приложение. Убедитесь, что он знает ваш номер телефона или имя
-                  пользователя в приложении (00НомерСотовогоТелефона)
-                </p>
-              </div>
             </div>
           </div>
         </div>
