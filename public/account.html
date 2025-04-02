@@ -82,7 +82,7 @@
 
     <!-- MAIN -->
     <main
-      class="max-w-base mx-auto w-full flex gap-8 xl:gap-16 px-2 sm:px-4 py-4 sm:py-8"
+      class="max-w-base mx-auto w-full flex gap-8 xl:gap-16 px-4 sm:px-4 py-4 sm:py-8"
     >
       <!-- Menu -->
       <div
@@ -465,7 +465,7 @@
                         <img
                           src="./assets/svgs/copy.svg"
                           alt="Copy icon"
-                          class="copy-icon"
+                          class="copy-icon hover:opacity-70 transition-all duration-200"
                         />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -473,7 +473,7 @@
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="size-5 stroke-theme-primary hidden tick-icon"
+                          class="size-5 stroke-theme-primary hidden tick-icon hover:opacity-70 transition-all duration-200"
                         >
                           <path
                             stroke-linecap="round"
@@ -500,7 +500,7 @@
                         <img
                           src="./assets/svgs/eye.svg"
                           alt="Eye icon"
-                          class="eye-icon"
+                          class="eye-icon hover:opacity-70 transition-all duration-200"
                         />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -508,7 +508,7 @@
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="size-5 stroke-theme-primary hidden eye-slash-icon"
+                          class="size-5 stroke-theme-primary hidden eye-slash-icon hover:opacity-70 transition-all duration-200"
                         >
                           <path
                             stroke-linecap="round"
@@ -521,7 +521,7 @@
                         <img
                           src="./assets/svgs/copy.svg"
                           alt="Copy icon"
-                          class="copy-icon"
+                          class="copy-icon hover:opacity-70 transition-all duration-200"
                         />
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -529,7 +529,7 @@
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentColor"
-                          class="size-5 stroke-theme-primary hidden tick-icon"
+                          class="size-5 stroke-theme-primary hidden tick-icon hover:opacity-70 transition-all duration-200"
                         >
                           <path
                             stroke-linecap="round"
@@ -604,8 +604,9 @@
                       <span>Телефон</span>
                       <input
                         type="text"
-                        class="h-10 w-full border border-theme-input rounded-lg outline-theme-primary px-3"
+                        class="h-10 w-full border border-theme-input rounded-lg outline-theme-primary disabled:bg-theme-input disabled:text-theme-muted-foreground px-3"
                         id="edit-phone"
+                        disabled
                       />
                     </label>
                   </form>
@@ -638,19 +639,15 @@
             <div
               class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-theme-sidebar-border border-dashed pb-4"
             >
-              <h3
-                class="border-b border-theme-sidebar-border border-dashed pb-4"
-              >
-                Купленные карты
-              </h3>
+              <h3>Купленные карты</h3>
 
-              <div class="flex flex-col sm:flex-row sm:items-center gap-2 mt-4">
-                <a
+              <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                <!-- <a
                   href="#"
                   class="h-10 w-full sm:w-[150px] text-sm text-center font-medium border border-theme-input rounded-lg hover:border-theme-primary hover:text-theme-primary transition-all duration-200 py-2"
                 >
                   Добавить карту
-                </a>
+                </a> -->
                 <a
                   href="./purchasing-card-1.html"
                   class="h-10 w-full sm:w-[150px] group flex items-center justify-center gap-1 text-sm bg-theme-primary text-white border border-theme-primary rounded-lg hover:bg-white hover:text-theme-primary transition-all duration-200"
